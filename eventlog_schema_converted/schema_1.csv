@@ -1,0 +1,127 @@
+0,driver,loaded,driver
+1,process,raw_access_read,drive
+2,process,created,file
+3,process,modified,file
+4,process,modified,file
+5,process,renamed,file
+6,process,downloaded,file
+7,user,accessed,file
+8,user,requested_a_handle,file
+9,user,requested_a_handle,file
+10,user,accessed,file
+11,user,deleted,file
+12,user,changed_permissions,file
+13,process,loaded,module
+14,process,created,pipe
+15,process,connected_to,pipe
+16,process,created,process
+17,process,created,process
+18,user,terminated,process
+19,process,terminated,
+20,process,wrote_to,process
+21,process,opened,process
+22,process,connected_to,ip
+23,process,connected_to,host
+24,user,connected_to,host
+25,user,connected_to,ip
+26,host,blocked_service_connection_to,process
+27,host,permitted_listener_on,process
+28,host,blocked_listener_on,process
+29,host,permitted_inbound_connection_on,process
+30,process,connected_from,ip
+31,host,permitted_outbound_connection_on,process
+32,process,connected_to,ip
+33,host,blocked_inbound_connection_on,process
+34,host,blocked_outbound_connection_on,process
+35,host,permitted_local_port_bind_on,process
+36,process,bound _to,port
+37,host,blocked_local_port_bind_on,process
+38,user,requested,ticket granting ticket
+39,user,requested,service ticket
+40,user,renewed,service ticket
+41,user,requested,service ticket
+42,user,disconnected_from,host
+43,user,connected_to,host
+44,user,locked,host
+45,user,unlocked,host
+46,user,created,computer
+47,user,changed,computer
+48,user,deleted,computer
+49,user,created,group
+50,user,changed,group
+51,user,added,user
+52,user,removed,user
+53,user,deleted,group
+54,user,created,group
+55,user,added,user
+56,user,removed,user
+57,user,deleted,group
+58,user,changed,group
+59,user,changed_type,group
+60,user,enumerated,group members
+61,user,created,user
+62,user,enabled,user
+63,user,changed_password,user
+64,user,reset_password,user
+65,user,disabled,user
+66,user,deleted,user
+67,user,changed,user
+68,user,locked,user
+69,user,unlocked,user
+70,user,changed_name,user
+71,user,enumerated,user
+72,user,enumerated,group
+73,user,accessed,ad object
+74,user,requested_a_handle,ad object
+75,user,modified,ad object
+76,user,created,ad object
+77,user,restored,ad object
+78,user,moved,ad object
+79,user,deleted,ad object
+80,user,failed,host
+81,user,accessed,network share
+82,user,added,network share
+83,user,modified,network share
+84,user,deleted,network share
+85,process,requested_a_handle,win registry key
+86,user,requested_a_handle,win registry key
+87,process,requested_a_handle,win registry key
+88,user,requested_a_handle,win registry key
+89,user,created,symbolic link
+90,user,created,scheduled task
+91,user,deleted,scheduled task
+92,user,enabled,scheduled task
+93,user,disabled,scheduled task
+94,user,updated,scheduled task
+95,process,deleted,
+96,process,deleted,
+97,process,accessed,win registry key
+98,user,accessed,win registry key
+99,process,deleted,win registry key
+100,user,deleted,win registry key
+101,process,closed_a_handle,handle
+102,process,closed_a_handle,handle
+103,process,changed_permissions,win registry key
+104,user,changed_permissions,win registry key
+105,user,modified,win registry key value
+106,process,modified,win registry key value
+107,user,requested_a_handle,sam object
+108,user,granted_access,user
+109,user,removed_access,user
+110,process,attempted,object
+111,process,called,privileged service
+112,process,attempted,privileged object
+113,process,stopped,Firewall Service
+114,user,stopped,Firewall Service
+115,process,stopped,Firewall Driver
+116,user,stopped,Firewall Driver
+117,user,installed,service
+118,host,authenticated,user
+119,user,authenticated_with,ticket granting ticket
+120,user,authenticated,host
+121,user,authenticated,host
+122,process,created,win registry key
+123,process,deleted,win registry key
+124,process,renamed,win registry key
+125,process,renamed,win registry key value
+126,process,modified,win registry key value

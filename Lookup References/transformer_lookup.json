@@ -1,0 +1,449 @@
+{
+  "1": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "Hashes",
+    "Image",
+    "ParentImage",
+    "CommandLine",
+    "ParentCommandLine",
+    "ProcessId",
+    "ParentProcessId"
+  ],
+  "2": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ThreadID",
+    "ProcessID",
+    "SourceHostname",
+    "DestinationHostname",
+    "SourceIp",
+    "DestinationIp",
+    "SourcePort",
+    "SourcePortName",
+    "DestinationPort",
+    "DestinationPortName"
+  ],
+  "3": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "Image"
+  ],
+  "5": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "Image",
+    "ImageLoaded",
+    "Description",
+    "FileVersion",
+    "Product",
+    "Hashes",
+    "Signed",
+    "Signature",
+    "SignatureStatus"
+  ],
+  "8": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "SourceProcessGuid",
+    "SourceProcessId",
+    "TargetProcessGuid",
+    "TargetProcessId",
+    "SourceImage",
+    "TargetImage",
+    "NewThreadId",
+    "StartAddress",
+    "StartModule",
+    "StartFunction"
+  ],
+  "10": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "SourceProcessGuid",
+    "SourceProcessId",
+    "SourceThreadId",
+    "SourceImage",
+    "TargetProcessGuid",
+    "TargetProcessId",
+    "TargetImage",
+    "GrantedAccess",
+    "CallTrace"
+  ],
+  "11": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "TargetFilename",
+    "Image",
+    "CreationUtcTime"
+  ],
+  "12": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "Image",
+    "TargetObject"
+  ],
+  "13": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "Image",
+    "TargetObject",
+    "Details"
+  ],
+  "14": [
+    "EventID",
+    "SystemTime",
+    "UserID",
+
+    "ProcessGuid",
+    "ProcessId",
+    "Image",
+    "TargetObject",
+    "NewName"
+  ],
+  "4688": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+    "TargetLogonId",
+
+    "NewProcessId",
+    "NewProcessName",
+    "ProcessId",
+    "CommandLine",
+    "ParentProcessName"
+  ],
+  "4657": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "ObjectValueName",
+    "OperationType",
+
+    "OldValueType",
+    "OldValue",
+    "NewValueType",
+    "NewValue",
+
+    "ProcessId",
+    "ProcessName"
+  ],
+  "4663": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "ObjectType",
+    "ObjectName",
+    "AccessList",
+    "AccessMask",
+
+    "ProcessId",
+    "ProcessName",
+    "ResourceAttributes"
+  ],
+  "4689": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "Status",
+    "ProcessId",
+    "ProcessName"
+  ],
+  "5156": [
+    "EventID",
+    "SystemTime",
+
+    "RemoteUserID",
+    "RemoteMachineID",
+
+    "ProcessID",
+    "Application",
+    "Direction",
+
+    "SourceAddress",
+    "SourcePort",
+
+    "DestAddress",
+    "DestPort",
+
+    "Protocol",
+    "FilterRTID",
+    "LayerName",
+    "LayerRTID"
+  ],
+  "5154": [
+    "EventID",
+    "SystemTime",
+
+    "ProcessID",
+    "Application",
+
+    "SourceAddress",
+    "SourcePort",
+
+    "Protocol",
+    "FilterRTID",
+
+    "LayerName",
+    "LayerRTID"
+  ],
+  "4624": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+    "TargetLogonId",
+
+    "LogonType",
+    "LogonProcessName",
+    "WorkstationName",
+    "TransmittedServices",
+
+    "ProcessId",
+    "ProcessName",
+    "IpAddress",
+    "IpPort",
+
+    "TargetOutboundUserName",
+    "TargetOutboundDomainName"
+  ],
+  "4625": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "Status",
+    "FailureReason",
+    "SubStatus",
+    "LogonType",
+
+    "LogonProcessName",
+    "WorkstationName",
+    "TransmittedServices",
+    "ProcessId",
+
+    "ProcessName",
+    "IpPort",
+    "IpAddress"
+  ],
+  "4732": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "MemberName",
+    "MemberSid",
+    "PrivilegeList",
+    "MembershipExpirationTime"
+  ],
+  "4697": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "ServiceName",
+    "ServiceFileName",
+    "ServiceType",
+
+    "ServiceStartType",
+    "ServiceAccount"
+  ],
+  "4720": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "PrivilegeList",
+    "DisplayName",
+    "UserPrincipalName",
+    "HomeDirectory",
+    "HomePath",
+    "DisplayName",
+    "ScriptPath",
+    "ProfilePath",
+    "UserWorkstations",
+
+    "PasswordLastSet",
+    "AccountExpires",
+    "PrimaryGroupId",
+
+    "AllowedToDelegateTo",
+    "OldUacValue",
+    "NewUacValue",
+    "UserAccountControl",
+    "UserParameters",
+    "SidHistory",
+    "LogonHours",
+
+    "SamAccountName"
+  ],
+  "4724": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName"
+  ],
+  "4727": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "PrivilegeList",
+    "SamAccountName",
+    "SidHistory"
+  ],
+  "4728": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "MemberName",
+    "MemberSid",
+    "MembershipExpirationTime",
+    "PrivilegeList"
+  ],
+  "4730": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "TargetUserSid",
+    "TargetUserName",
+    "TargetDomainName",
+
+    "PrivilegeList"
+  ],
+  "5136": [
+    "EventID",
+    "SystemTime",
+
+    "SubjectUserSid",
+    "SubjectUserName",
+    "SubjectDomainName",
+    "SubjectLogonId",
+
+    "OpCorrelationID",
+    "AppCorrelationID",
+    "DSName",
+
+    "DSType",
+    "ObjectDN",
+    "ObjectClass",
+    "AttributeLDAPDisplayName",
+    "AttributeSyntaxOID",
+    "AttributeValue",
+    "OperationType"
+  ]
+}

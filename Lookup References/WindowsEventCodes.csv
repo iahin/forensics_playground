@@ -1,0 +1,588 @@
+﻿EventCode,Category,Level,Event Log,EventDescription,Subcategory
+1,System or Sysmon,Information,System or Sysmon,System Time Changed or Sysmon Process Start,System Integrity
+2,System or Sysmon,Information,System or Sysmon,Update Packages Installed,Software and Service Installation
+3,Sysmon,Information,Sysmon,Network connection,Sysmon
+4,Sysmon,Information,Sysmon,Sysmon service state changed,Sysmon
+5,Sysmon,Information,Sysmon,Process Terminated,Sysmon
+6,System or Sysmon,Information,System or Sysmon,New Kernel Filter Driver or Driver Loaded,Software and Service Installation
+7,Sysmon,Information,Sysmon,Image Loaded,Sysmon
+8,Sysmon,Information,Sysmon,Create Remote Thread,Sysmon
+9,Sysmon,Information,Sysmon,Raw access read,Sysmon
+10,Sysmon,Information,Sysmon,Process Access,Sysmon
+11,Microsoft-Windows-CAPI2/Operational,Information or Sysmon,Microsoft-Windows-CAPI2/Operational or Sysmon,Cert Trust Chain Build Failed or File Create,Microsoft Cryptography API
+12,System or Sysmon,Information,System or Sysmon,Windows Startup or Registry Object Create or Delete,Boot Events
+13,System or Sysmon,Information,System or Sysmon,Windows Shutdown or Registry Value Set,Boot Events
+14,Sysmon,Information,Sysmon,Registry Key and Value Rename,Sysmon
+15,Sysmon,Information,Sysmon,File Create Stream Hash,Sysmon
+17,Sysmon,Information,Sysmon,Pipe Event Created,Sysmon
+18,System or Sysmon,Information,System or Sysmon,Windows Update Ready or Pipe Event Connected,Update
+19,System or Sysmon,Information,System or Sysmon,Windows Update Installed or WmiEventFilter activity Detected,Update
+20,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Error,Microsoft-Windows-WindowsUpdateClient/Operational or Sysmon,Windows Update Failed or WmiEventConsumer activity detected,Windows Update Errors
+21,Sysmon,Information,Sysmon,WmiEventConsumerToFilter activity Detected,Sysmon
+22,Sysmon,Information,Sysmon,DNS Event,Sysmon
+23,Sysmon,Information,Sysmon,File Delete,Sysmon
+24,Sysmon,Information,Sysmon,Clipboard Event,Sysmon
+24,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,Windows Update Failed,Windows Update Errors
+25,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Application,Windows Update Failed,Windows Update Errors
+31,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,Windows Update Failed,Windows Update Errors
+34,Microsoft-Windows-WindowsUpdateClient/Operational,Error,Microsoft-Windows-WindowsUpdateClient/Operational,Windows Update Failed,Windows Update Errors
+42,Microsoft-Windows-EventCollector,Information,Microsoft-Windows-EventCollector,EMET,EMET
+43,Microsoft-Windows-USB-USBHUB3-Analytic,Information,Microsoft-Windows-USB-USBHUB3-Analytic,New Device Information,External Media Detection
+60,Microsoft-Windows-Bits-Client,Information,Microsoft-Windows-Bits-Client,Bits Client,Bits Client
+70,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,Private Key Accessed,Microsoft Cryptography API
+80,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,Processing of a request,
+81,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,Sending the request for operation Get to destination host and port,
+90,Microsoft-Windows-CAPI2/Operational,Information,Microsoft-Windows-CAPI2/Operational,X.509 Object,Microsoft Cryptography API
+104,Security,Information,System,The Application or System log was cleared,Clearing Event Logs
+106,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,New Task Registered,Task Scheduler Activities
+129,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,Created,Task Scheduler
+132,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,WSMan operation Identify completed successfully,
+141,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,Deleted,Task Scheduler
+142,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,Task Disabled,Task Scheduler Activities
+143,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,Received the response from Network layer),
+166,Microsoft-Windows-Windows-Remote-Management-Operational,Information,Microsoft-Windows-Windows-Remote-Management-Operational,The chosen authentication mechanism is Negotiate,
+169,Powershell,Information,Powershell,Remote Connection,PowerShell Activities
+200,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,Task Launched,Task Scheduler Activities
+201,Microsoft-Windows-TaskScheduler/Operational,Information,Microsoft-Windows-TaskScheduler/Operational,The operation has been completed,Task Scheduler Activities
+219,System,Warning,System,Failed Kernel Driver Loading,System Integrity
+255,Sysmon,Information,Sysmon,Sysmon Error,Sysmon
+256,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,DNS Request/Response,DNS/Directory Services
+257,Microsoft-Windows-DNSServer/Analytical,Information,Microsoft-Windows-DNSServer/Analytical,DNS Request/Response,DNS/Directory Services
+300,Microsoft-Windows-LSA/Operational,Information,Microsoft-Windows-LSA/Operational,Group Assigned to new Session,Account Usage
+307,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,The Federation Service configuration was changed,ADFS Audit
+400,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,New Mass Storage Installation,External Media Detection
+410,Microsoft-Windows-Kernel-PnP/Device Configuration,Information,Microsoft-Windows-Kernel-PnP/Device Configuration,New Mass Storage Installation,External Media Detection
+500,Microsoft-Windows-ApplicationExperience-Program-Telemetry,Information,Microsoft-Windows-ApplicationExperience-Program-Telemetry,Compatibility fix applied,
+510,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,Long Text,ADFS Audit
+521,Microsoft-Windows-EventCollector,Information,Security,Windows events can't forward to Security log,EventCollector
+800,Powershell,Information,Powershell,Get-MessageTrackingLog cmdlet,PowerShell Activities
+865,Application,Warning,Application,SRP Block,Application Whitelisting
+866,Application,Warning,Application,SRP Block,Application Whitelisting
+867,Application,Warning,Application,SRP Block,Application Whitelisting
+868,Application,Warning,Application,SRP Block,Application Whitelisting
+882,Application,Warning,Application,SRP Block,Application Whitelisting
+903,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,New Application Installation,Software and Service Installation
+904,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,New Application Installation,Software and Service Installation
+905,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,Updated Application,Software and Service Installation
+906,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,Updated Application,Software and Service Installation
+907,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,Removed Application,Software and Service Installation
+908,Microsoft-Windows-Application-Experience/Program-Inventory,Information,Microsoft-Windows-Application-Experience/Program-Inventory,Removed Application,Software and Service Installation
+1000,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,An antimalware scan started.,Windows Defender Activities
+1001,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,An antimalware scan finished.,Windows Defender Activities
+1002,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,An antimalware scan was stopped before it finished.,Windows Defender Activities
+1005,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,An antimalware scan failed.,Windows Defender Activities
+1006,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,The antimalware engine found malware or other potentially unwanted software.,Windows Defender Activities
+1007,Microsoft-Windows-CertificateServicesClient-Lifecycle/Operational,Informational,Microsoft-Windows-CertificateServicesClient-Lifecycle/Operational,Certificate Exported,Certificate Services Activities
+1008,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,"The antimalware platform attempted to perform an action to protect your system from malware or other potentially unwanted software, but the action failed.",Windows Defender Activities
+1009,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,The antimalware platform restored an item from quarantine.,Windows Defender Activities
+1010,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,The antimalware platform could not restore an item from quarantine.,Windows Defender Activities
+1022,Application,Information,Application,New MSI File Installed,Software and Service Installation
+1023,Application,Information,Application,New MSI File Installed,Software and Service Installation
+1024,Microsoft-Windows-TerminalServices-RDPClient/Operational,Information,Microsoft-Windows-TerminalServices-RDPClient/Operational,Outbound TS Connect Attempt,Network Policy Server
+1033,Application,Information,Application,New MSI File Installed,Software and Service Installation
+1034,Windows Installer,Information,Installer,Windows Installer removed the product,Installer
+1074,User32,Warning,User32,Shutdown Initiate Failed,Boot Events
+1100,Security,Information,Security,Event Log Service Shutdown,Clearing Event Logs
+1101,Security,Error,Security,Audit events have been dropped by the transport,Windows Audit
+1102,Security,Information,Security,The audit log was cleared,Clearing Event Logs
+1104,Security,Information,Security,The security log is now full,Windows Audit
+1105,Security,Information,Security,Event log automatic backup,Windows Audit
+1108,Security,Information,Security,The event logging service encountered an error,Windows Audit
+1116,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,Detected Malware,Windows Defender Activities
+1117,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,Malware Removed,Windows Defender Activities
+1118,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,Malware Removal Error,Windows Defender Activities
+1119,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,Malware Removal Fatal Error,Windows Defender Activities
+1125,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,Event when Network protection fires in Audit-mode.,Windows Defender Activities
+1126,Microsoft-Windows-Windows Defender/Operational,Information,Microsoft-Windows-Windows Defender/Operational,Event when Network protection fires in Block-mode.,Windows Defender Activities
+1129,Microsoft-Windows-GroupPolicy,Error,System,Group Policy Application Failed due to Connectivity,Group Policy Errors
+1200,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,Application Token Success,ADFS Audit
+1202,Microsoft-Windows-ADFS/Audit,Informational,Microsoft-Windows-AD FS/Admin,Fresh Credential Validation Success,ADFS Audit
+1511,Application,Error,Application,Temp Profile Logon,Account Usage
+1518,Application,Error,Application,Create Profile Failed,Account Usage
+2001,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,The antimalware definition update failed.,Windows Defender Activities
+2003,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,The antimalware engine update failed.,Windows Defender Activities
+2004,Microsoft-Windows-Windows Defender/Operational,Warning,Microsoft-Windows-Windows Defender/Operational,There was a problem loading antimalware definitions. The antimalware engine will attempt to load the last-known good set of definitions.,Windows Defender Activities
+2009,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Error,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Firewall Failed to load Group Policy,Windows Firewall
+2033,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Information,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Firewall Rules Deleted,Windows Firewall
+3001,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,Code Integrity Check,Kernel Driver Signing
+3002,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,Real-Time Protection failed,Windows Defender Activities
+3003,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,Code Integrity Check,Kernel Driver Signing
+3004,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,Code Integrity Check,Kernel Driver Signing
+3008,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,DNS Query Complete,DNS/Directory Services
+3010,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,Code Integrity Check,Kernel Driver Signing
+3020,Microsoft-Windows-DNS-Client/Operational,Information,Microsoft-Windows-DNS-Client/Operational,DNS Response Complete,DNS/Directory Services
+3023,Microsoft-Windows-CodeIntegrity/Operational,"Warning, Error",Microsoft-Windows-CodeIntegrity/Operational,Code Integrity Check,Kernel Driver Signing
+4100,Powershell,Information,Microsoft-Windows-Powershell/Operational,System Error,Executing Pipeline
+4101,Powershell,Information,Microsoft-Windows-Powershell/Operational,Executing Pipeline,Powershell
+4102,Powershell,Information,Microsoft-Windows-Powershell/Operational,Executing Pipeline,Powershell
+4103,Powershell,Information,Microsoft-Windows-Powershell/Operational,Module Logging,Powershell
+4104,Powershell,Information,Microsoft-Windows-Powershell/Operational,Script Block Logging,Powershell
+4105,Powershell,Information,Microsoft-Windows-Powershell/Operational,Exception Raised,PowerShell Activities
+4106,Powershell,Information,Microsoft-Windows-Powershell/Operational,Exception Raised,PowerShell Activities
+4608,System,Information,System,Windows is starting up.,Security State Change
+4609,System,Information,System,Windows is shutting down.,Security State Change
+4610,System,Information,System,An authentication package has been loaded by the Local Security Authority.,Security System Extension
+4611,System,Information,System,A trusted logon process has been registered with the Local Security Authority.,Security System Extension
+4612,System,Information,System,"Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits.",System Integrity
+4614,System,Information,System,A notification package has been loaded by the Security Account Manager.,Security System Extension
+4615,System,Information,System,Invalid use of LPC port.,System Integrity
+4616,System,Information,System,The system time was changed.,Security State Change
+4618,System,Information,System,A monitored security event pattern has occurred.,System Integrity
+4621,System,Information,System,Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.,Security State Change
+4622,System,Information,System,A security package has been loaded by the Local Security Authority.,Security System Extension
+4624,Logon/Logoff,Information,Security,An account was successfully logged on.,Logon
+4625,Logon/Logoff,Information,Security,An account failed to log on.,Logon
+4626,Logon/Logoff,Information,Security,User/Device claims information.,Logon
+4627,Logon/Logoff,Information,Security,Group membership information.,Group Membership
+4634,Logon/Logoff,Information,Security,An account was logged off.,Logoff
+4646,Logon/Logoff,Information,Security,IKE DoS-Prevention mode started,IPsec Main Mode
+4647,Logon/Logoff,Information,Security,User initiated logoff,Logoff
+4648,Logon/Logoff,Information,Security,A logon was attempted using explicit credentials.,Logon
+4649,Logon/Logoff,Information,Security,A replay attack was detected.,Other Logon/Logoff Events
+4650,Logon/Logoff,Information,Security,An IPsec Main Mode security association was established. Extended Mode was not enabled. Certificate authentication was not used.,IPsec Main Mode
+4651,Logon/Logoff,Information,Security,An IPsec Main Mode security association was established. Extended Mode was not enabled. A certificate was used for authentication.,IPsec Main Mode
+4652,Logon/Logoff,Information,Security,An IPsec Main Mode negotiation failed.,IPsec Main Mode
+4653,Logon/Logoff,Information,Security,An IPsec Main Mode negotiation failed.,IPsec Main Mode
+4654,Logon/Logoff,Information,Security,An IPsec Quick Mode negotiation failed.,IPsec Quick Mode
+4655,Logon/Logoff,Information,Security,An IPsec Main Mode security association ended.,IPsec Main Mode
+4656,Object Access,Information,Security,A handle to an object was requested.,Handle Manipulation
+4657,Object Access,Information,Security,A registry value was modified.,Registry
+4658,Object Access,Information,Security,The handle to an object was closed.,Handle Manipulation
+4659,Object Access,Information,Security,A handle to an object was requested with intent to delete.,SAM
+4660,Object Access,Information,Security,An object was deleted.,SAM
+4661,Object Access,Information,Security,A handle to an object was requested.,SAM
+4662,DS Access,Information,Security,An operation was performed on an object.,Directory Service Access
+4663,Object Access,Information,Security,An attempt was made to access an object.,Kernel
+4664,Object Access,Information,Security,An attempt was made to create a hard link.,File System
+4665,Object Access,Information,Security,An attempt was made to create an application client context.,Application Generated
+4666,Object Access,Information,Security,An application attempted an operation:,Application Generated
+4667,Object Access,Information,Security,An application client context was deleted.,Application Generated
+4668,Object Access,Information,Security,An application was initialized.,Application Generated
+4670,Policy Change,Information,Security,Permissions on an object were changed.,Subcategory (special)
+4671,Object Access,Information,Security,An application attempted to access a blocked ordinal through the TBS.,Other Object Access Events
+4672,Privilege Use,Information,Security,Special privileges assigned to new logon.,Sensitive Privilege Use / Non Sensitive Privilege Use
+4673,Privilege Use,Information,Security,A privileged service was called.,Sensitive Privilege Use / Non Sensitive Privilege Use
+4674,Privilege Use,Information,Security,An operation was attempted on a privileged object.,Sensitive Privilege Use / Non Sensitive Privilege Use
+4675,Logon/Logoff,Information,Security,SIDs were filtered.,Logon
+4688,Detailed Tracking,Information,Security,A new process has been created.,Process Creation
+4689,Detailed Tracking,Information,Security,A process has exited.,Process Termination
+4690,Object Access,Information,Security,An attempt was made to duplicate a handle to an object.,Handle Manipulation
+4691,Object Access,Information,Security,Indirect access to an object was requested.,Other Object Access Events
+4692,Detailed Tracking,Information,Security,Backup of data protection master key was attempted.,DPAPI Activity
+4693,Detailed Tracking,Information,Security,Recovery of data protection master key was attempted.,DPAPI Activity
+4694,Detailed Tracking,Information,Security,Protection of auditable protected data was attempted.,DPAPI Activity
+4695,Detailed Tracking,Information,Security,Unprotection of auditable protected data was attempted.,DPAPI Activity
+4696,Detailed Tracking,Information,Security,A primary token was assigned to process.,Process Creation
+4697,System,Information,Security,A service was installed in the system.,Security System Extension
+4698,Object Access,Information,Security,A scheduled task was created.,Other Object Access Events
+4699,Object Access,Information,Security,A scheduled task was deleted.,Other Object Access Events
+4700,Object Access,Information,Security,A scheduled task was enabled.,Other Object Access Events
+4701,Object Access,Information,Security,A scheduled task was disabled.,Other Object Access Events
+4702,Object Access,Information,Security,A scheduled task was updated.,Other Object Access Events
+4703,Policy Change,Information,Security,A user right was adjusted.,Authorization Policy Change
+4704,Policy Change,Information,Security,A user right was assigned.,Authorization Policy Change
+4705,Policy Change,Information,Security,A user right was removed.,Authorization Policy Change
+4706,Policy Change,Information,Security,A new trust was created to a domain.,Authorization Policy Change
+4707,Policy Change,Information,Security,A trust to a domain was removed.,Authorization Policy Change
+4709,Policy Change,Information,Security,IPsec Services was started.,Filtering Platform Policy Change
+4710,Policy Change,Information,Security,IPsec Services was disabled.,Filtering Platform Policy Change
+4711,Policy Change,Information,Security,PAStore Engine Event,Filtering Platform Policy Change
+4712,Policy Change,Information,Security,IPsec Services encountered a potentially serious failure.,Filtering Platform Policy Change
+4713,Policy Change,Information,Security,Kerberos policy was changed.,Authentication Policy Change
+4714,Policy Change,Information,Security,Encrypted data recovery policy was changed.,Authorization Policy Change
+4715,Policy Change,Information,Security,The audit policy (SACL) on an object was changed.,Audit Policy Change
+4716,Policy Change,Information,Security,Trusted domain information was modified.,Authentication Policy Change
+4717,Policy Change,Information,Security,System security access was granted to an account.,Authentication Policy Change
+4718,Policy Change,Information,Security,System security access was removed from an account.,Authentication Policy Change
+4719,Policy Change,Information,Security,System audit policy was changed.,Audit Policy Change
+4720,Account Management,Information,Security,A user account was created.,User Account Management
+4722,Account Management,Information,Security,A user account was enabled.,User Account Management
+4723,Account Management,Information,Security,An attempt was made to change an account's password.,User Account Management
+4724,Account Management,Information,Security,An attempt was made to reset an account's password.,User Account Management
+4725,Account Management,Information,Security,A user account was disabled.,User Account Management
+4726,Account Management,Information,Security,A user account was deleted.,User Account Management
+4727,Account Management,Information,Security,A security-enabled global group was created.,Security Group Management
+4728,Account Management,Information,Security,A member was added to a security-enabled global group.,Security Group Management
+4729,Account Management,Information,Security,A member was removed from a security-enabled global group.,Security Group Management
+4730,Account Management,Information,Security,A security-enabled global group was deleted.,Security Group Management
+4731,Account Management,Information,Security,A security-enabled local group was created.,Security Group Management
+4732,Account Management,Information,Security,A member was added to a security-enabled local group.,Security Group Management
+4733,Account Management,Information,Security,A member was removed from a security-enabled local group.,Security Group Management
+4734,Account Management,Information,Security,A security-enabled local group was deleted.,Security Group Management
+4735,Account Management,Information,Security,A security-enabled local group was changed.,Security Group Management
+4737,Account Management,Information,Security,A security-enabled global group was changed.,Security Group Management
+4738,Account Management,Information,Security,A user account was changed.,User Account Management
+4739,Policy Change,Information,Security,Domain Policy was changed.,Authentication Policy Change
+4740,Account Management,Information,Security,A user account was locked out.,User Account Management
+4741,Account Management,Information,Security,A computer account was created.,Computer Account Management
+4742,Account Management,Information,Security,A computer account was changed.,Computer Account Management
+4743,Account Management,Information,Security,A computer account was deleted.,Computer Account Management
+4744,Account Management,Information,Security,A security-disabled local group was created.,Distribution Group Management
+4745,Account Management,Information,Security,A security-disabled local group was changed.,Distribution Group Management
+4746,Account Management,Information,Security,A member was added to a security-disabled local group.,Distribution Group Management
+4747,Account Management,Information,Security,A member was removed from a security-disabled local group.,Distribution Group Management
+4748,Account Management,Information,Security,A security-disabled local group was deleted.,Distribution Group Management
+4749,Account Management,Information,Security,A security-disabled global group was created.,Distribution Group Management
+4750,Account Management,Information,Security,A security-disabled global group was changed.,Distribution Group Management
+4751,Account Management,Information,Security,A member was added to a security-disabled global group.,Distribution Group Management
+4752,Account Management,Information,Security,A member was removed from a security-disabled global group.,Distribution Group Management
+4753,Account Management,Information,Security,A security-disabled global group was deleted.,Distribution Group Management
+4754,Account Management,Information,Security,A security-enabled universal group was created.,Security Group Management
+4755,Account Management,Information,Security,A security-enabled universal group was changed.,Security Group Management
+4756,Account Management,Information,Security,A member was added to a security-enabled universal group.,Security Group Management
+4757,Account Management,Information,Security,A member was removed from a security-enabled universal group.,Security Group Management
+4758,Account Management,Information,Security,A security-enabled universal group was deleted.,Security Group Management
+4759,Account Management,Information,Security,A security-disabled universal group was created.,Distribution Group Management
+4760,Account Management,Information,Security,A security-disabled universal group was changed.,Distribution Group Management
+4761,Account Management,Information,Security,A member was added to a security-disabled universal group.,Distribution Group Management
+4762,Account Management,Information,Security,A member was removed from a security-disabled universal group.,Distribution Group Management
+4763,Account Management,Information,Security,A security-disabled universal group was deleted.,Distribution Group Management
+4764,Account Management,Information,Security,A groupÕs type was changed.,Security Group Management
+4765,Account Management,Information,Security,SID History was added to an account.,User Account Management
+4766,Account Management,Information,Security,An attempt to add SID History to an account failed.,User Account Management
+4767,Account Management,Information,Security,A user account was unlocked.,User Account Management
+4768,Account Logon,Information,Security,A Kerberos authentication ticket (TGT) was requested.,Kerberos Authentication Service
+4769,Account Logon,Information,Security,A Kerberos service ticket was requested.,Kerberos Service Ticket Operations
+4770,Account Logon,Information,Security,A Kerberos service ticket was renewed.,Kerberos Service Ticket Operations
+4771,Account Logon,Information,Security,Kerberos pre-authentication failed.,Kerberos Authentication Service
+4772,Account Logon,Information,Security,A Kerberos authentication ticket request failed.,Kerberos Authentication Service
+4773,Account Logon,Information,Security,A Kerberos service ticket request failed.,Kerberos Authentication Service
+4774,Account Logon,Information,Security,An account was mapped for logon.,Credential Validation
+4775,Account Logon,Information,Security,An account could not be mapped for logon.,Credential Validation
+4776,Account Logon,Information,Security,The domain controller attempted to validate the credentials for an account.,Credential Validation
+4777,Account Logon,Information,Security,The domain controller failed to validate the credentials for an account.,Credential Validation
+4778,Logon/Logoff,Information,Security,A session was reconnected to a Window Station.,Other Logon/Logoff Events
+4779,Logon/Logoff,Information,Security,A session was disconnected from a Window Station.,Other Logon/Logoff Events
+4780,Account Management,Information,Security,The ACL was set on accounts which are members of administrators groups.,User Account Management
+4781,Account Management,Information,Security,The name of an account was changed:,User Account Management
+4782,Account Management,Information,Security,The password hash an account was accessed.,Other Account Management Events
+4783,Account Management,Information,Security,A basic application group was created.,Application Group Management
+4784,Account Management,Information,Security,A basic application group was changed.,Application Group Management
+4785,Account Management,Information,Security,A member was added to a basic application group.,Application Group Management
+4786,Account Management,Information,Security,A member was removed from a basic application group.,Application Group Management
+4787,Account Management,Information,Security,A non-member was added to a basic application group.,Application Group Management
+4788,Account Management,Information,Security,A non-member was removed from a basic application group.,Application Group Management
+4789,Account Management,Information,Security,A basic application group was deleted.,Application Group Management
+4790,Account Management,Information,Security,An LDAP query group was created.,Application Group Management
+4791,Account Management,Information,Security,A basic application group was changed.,Application Group Management
+4792,Account Management,Information,Security,An LDAP query group was deleted.,Application Group Management
+4793,Account Management,Information,Security,The Password Policy Checking API was called.,Other Account Management Events
+4794,Account Management,Information,Security,An attempt was made to set the Directory Services Restore Mode.,User Account Management
+4797,Account Management,Information,Security,An attempt was made to query the existence of a blank password for an account.,User Account Management
+4798,Account Management,Information,Security,A user's local group membership was enumerated.,User Account Management
+4799,Account Management,Information,Security,A security-enabled local group membership was enumerated.,Security Group Management
+4800,Logon/Logoff,Information,Security,The workstation was locked.,Other Logon/Logoff Events
+4801,Logon/Logoff,Information,Security,The workstation was unlocked.,Other Logon/Logoff Events
+4802,Logon/Logoff,Information,Security,The screen saver was invoked.,Other Logon/Logoff Events
+4803,Logon/Logoff,Information,Security,The screen saver was dismissed.,Other Logon/Logoff Events
+4816,System,Information,Security,RPC detected an integrity violation while decrypting an incoming message.,System Integrity
+4817,Policy Change,Information,Security,Auditing settings on an object were changed.,Audit Policy Change
+4818,Object Access,Information,Security,Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy,Central Access Policy Staging
+4819,Policy Change,Information,Security,Central Access Policies on the machine have been changed.,Other Policy Change Events
+4820,Account Logon,Information,Security,A Kerberos Ticket-granting-ticket (TGT) was denied because the device does not meet the access control restrictions.,Kerberos Authentication Service
+4821,Account Logon,Information,Security,"A Kerberos service ticket was denied because the user, device, or both does not meet the access control restrictions.",Kerberos Service Ticket Operations
+4822,Account Logon,Information,Security,NTLM authentication failed because the account was a member of the Protected User group.,Credential Validation
+4823,Account Logon,Information,Security,NTLM authentication failed because access control restrictions are required.,Credential Validation
+4824,Account Logon,Information,Security,Kerberos preauthentication by using DES or RC4 failed because the account was a member of the Protected User group.,Kerberos Authentication Service
+4825,Logon/Logoff,Information,Security,A user was denied the access to Remote Desktop.,Other Logon/Logoff Events
+4826,Policy Change,Information,Security,Boot Configuration Data loaded.,Other Policy Change Events
+4830,Account Management,Information,Security,SID History was removed from an account.,User Account Management
+4864,Policy Change,Information,Security,A namespace collision was detected.,Authentication Policy Change
+4865,Policy Change,Information,Security,A trusted forest information entry was added.,Authentication Policy Change
+4866,Policy Change,Information,Security,A trusted forest information entry was removed.,Authentication Policy Change
+4867,Policy Change,Information,Security,A trusted forest information entry was modified.,Authentication Policy Change
+4868,Object Access,Information,Security,The certificate manager denied a pending certificate request.,Certification Services
+4869,Object Access,Information,Security,Certificate Services received a resubmitted certificate request.,Certification Services
+4870,Object Access,Information,Security,Certificate Services revoked a certificate.,Certification Services
+4871,Object Access,Information,Security,Certificate Services received a request to publish the certificate revocation list (CRL).,Certification Services
+4872,Object Access,Information,Security,Certificate Services published the certificate revocation list (CRL).,Certification Services
+4873,Object Access,Information,Security,A certificate request extension changed.,Certification Services
+4874,Object Access,Information,Security,One or more certificate request attributes changed.,Certification Services
+4875,Object Access,Information,Security,Certificate Services received a request to shut down.,Certification Services
+4876,Object Access,Information,Security,Certificate Services backup started.,Certification Services
+4877,Object Access,Information,Security,Certificate Services backup completed.,Certification Services
+4878,Object Access,Information,Security,Certificate Services restore started.,Certification Services
+4879,Object Access,Information,Security,Certificate Services restore completed.,Certification Services
+4880,Object Access,Information,Security,Certificate Services started.,Certification Services
+4881,Object Access,Information,Security,Certificate Services stopped.,Certification Services
+4882,Object Access,Information,Security,The security permissions for Certificate Services changed.,Certification Services
+4883,Object Access,Information,Security,Certificate Services retrieved an archived key.,Certification Services
+4884,Object Access,Information,Security,Certificate Services imported a certificate into its database.,Certification Services
+4885,Object Access,Information,Security,The audit filter for Certificate Services changed.,Certification Services
+4886,Object Access,Information,Security,Certificate Services received a certificate request.,Certification Services
+4887,Object Access,Information,Security,Certificate Services approved a certificate request and issued a certificate.,Certification Services
+4888,Object Access,Information,Security,Certificate Services denied a certificate request.,Certification Services
+4889,Object Access,Information,Security,Certificate Services set the status of a certificate request to pending.,Certification Services
+4890,Object Access,Information,Security,The certificate manager settings for Certificate Services changed.,Certification Services
+4891,Object Access,Information,Security,A configuration entry changed in Certificate Services.,Certification Services
+4892,Object Access,Information,Security,A property of Certificate Services changed.,Certification Services
+4893,Object Access,Information,Security,Certificate Services archived a key.,Certification Services
+4894,Object Access,Information,Security,Certificate Services imported and archived a key.,Certification Services
+4895,Object Access,Information,Security,Certificate Services published the CA certificate to Active Directory Domain Services.,Certification Services
+4896,Object Access,Information,Security,One or more rows have been deleted from the certificate database.,Certification Services
+4897,Object Access,Information,Security,Role separation enabled,Certification Services
+4898,Object Access,Information,Security,Certificate Services loaded a template.,Certification Services
+4899,Object Access,Information,Security,A Certificate Services template was updated.,Certification Services
+4900,Object Access,Information,Security,Certificate Services template security was updated.,Certification Services
+4902,Policy Change,Information,Security,The Per-user audit policy table was created.,Audit Policy Change
+4904,Policy Change,Information,Security,An attempt was made to register a security event source.,Audit Policy Change
+4905,Policy Change,Information,Security,An attempt was made to unregister a security event source.,Audit Policy Change
+4906,Policy Change,Information,Security,The CrashOnAuditFail value has changed.,Audit Policy Change
+4907,Policy Change,Information,Security,Auditing settings on object were changed.,Audit Policy Change
+4908,Policy Change,Information,Security,Special Groups Logon table modified.,Audit Policy Change
+4909,Policy Change,Information,Security,The local policy settings for the TBS were changed.,Other Policy Change Events
+4910,Policy Change,Information,Security,The group policy settings for the TBS were changed.,Other Policy Change Events
+4911,Policy Change,Information,Security,Resource attributes of the object were changed.,Authorization Policy Change
+4912,Policy Change,Information,Security,Per User Audit Policy was changed.,Audit Policy Change
+4913,Policy Change,Information,Security,Central Access Policy on the object was changed.,Authorization Policy Change
+4928,DS Access,Information,Security,An Active Directory replica source naming context was established.,Detailed Directory Service Replication
+4929,DS Access,Information,Security,An Active Directory replica source naming context was removed.,Detailed Directory Service Replication
+4930,DS Access,Information,Security,An Active Directory replica source naming context was modified.,Detailed Directory Service Replication
+4931,DS Access,Information,Security,An Active Directory replica destination naming context was modified.,Detailed Directory Service Replication
+4932,DS Access,Information,Security,Synchronization of a replica of an Active Directory naming context has begun.,Directory Service Replication
+4933,DS Access,Information,Security,Synchronization of a replica of an Active Directory naming context has ended.,Directory Service Replication
+4934,DS Access,Information,Security,Attributes of an Active Directory object were replicated.,Detailed Directory Service Replication
+4935,DS Access,Information,Security,Replication failure begins.,Detailed Directory Service Replication
+4936,DS Access,Information,Security,Replication failure ends.,Detailed Directory Service Replication
+4937,DS Access,Information,Security,A lingering object was removed from a replica.,Detailed Directory Service Replication
+4944,Policy Change,Information,Security,The following policy was active when the Windows Firewall started.,MPSSVC Rule-Level Policy Change
+4945,Policy Change,Information,Security,A rule was listed when the Windows Firewall started.,MPSSVC Rule-Level Policy Change
+4946,Policy Change,Information,Security,A change has been made to Windows Firewall exception list. A rule was added.,MPSSVC Rule-Level Policy Change
+4947,Policy Change,Information,Security,A change has been made to Windows Firewall exception list. A rule was modified.,MPSSVC Rule-Level Policy Change
+4948,Policy Change,Information,Security,A change has been made to Windows Firewall exception list. A rule was deleted.,MPSSVC Rule-Level Policy Change
+4949,Policy Change,Information,Security,Windows Firewall settings were restored to the default values.,MPSSVC Rule-Level Policy Change
+4950,Policy Change,Information,Security,A Windows Firewall setting has changed.,MPSSVC Rule-Level Policy Change
+4951,Policy Change,Information,Security,A rule has been ignored because its major version number was not recognized by Windows Firewall.,MPSSVC Rule-Level Policy Change
+4952,Policy Change,Information,Security,Parts of a rule have been ignored because its minor version number was not recognized by Windows Firewall. The other parts of the rule will be enforced.,MPSSVC Rule-Level Policy Change
+4953,Policy Change,Information,Security,A rule has been ignored by Windows Firewall because it could not parse the rule.,MPSSVC Rule-Level Policy Change
+4954,Policy Change,Information,Security,Windows Firewall Group Policy settings have changed. The new settings have been applied.,MPSSVC Rule-Level Policy Change
+4956,Policy Change,Information,Security,Windows Firewall has changed the active profile.,MPSSVC Rule-Level Policy Change
+4957,Policy Change,Information,Security,Windows Firewall did not apply the following rule:,MPSSVC Rule-Level Policy Change
+4958,Policy Change,Information,Security,Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer:,MPSSVC Rule-Level Policy Change
+4960,System,Information,Security,"IPsec dropped an inbound packet that failed an integrity check. If this problem persists, it could indicate a network issue or that packets are being modified in transit to this computer. Verify that the packets sent from the remote computer are the same as those received by this computer. This error might also indicate interoperability problems with other IPsec implementations.",IPsec Driver
+4961,System,Information,Security,"IPsec dropped an inbound packet that failed a replay check. If this problem persists, it could indicate a replay attack against this computer.",IPsec Driver
+4962,System,Information,Security,IPsec dropped an inbound packet that failed a replay check. The inbound packet had too low a sequence number to ensure it was not a replay.,IPsec Driver
+4963,System,Information,Security,IPsec dropped an inbound clear text packet that should have been secured. This is usually due to the remote computer changing its IPsec policy without informing this computer. This could also be a spoofing attack attempt.,IPsec Driver
+4964,Logon/Logoff,Information,Security,Special groups have been assigned to a new logon.,Special Logon
+4965,System,Information,Security,"IPsec received a packet from a remote computer with an incorrect Security Parameter Index (SPI). This is usually caused by malfunctioning hardware that is corrupting packets. If these errors persist, verify that the packets sent from the remote computer are the same as those received by this computer. This error may also indicate interoperability problems with other IPsec implementations. In that case, if connectivity is not impeded, then these events can be ignored.",IPsec Driver
+4976,Logon/Logoff,Information,Security,"During Main Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Main Mode
+4977,Logon/Logoff,Information,Security,"During Quick Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Quick Mode
+4978,Logon/Logoff,Information,Security,"During Extended Mode negotiation, IPsec received an invalid negotiation packet. If this problem persists, it could indicate a network issue or an attempt to modify or replay this negotiation.",IPsec Extended Mode
+4979,Logon/Logoff,Information,Security,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode
+4980,Logon/Logoff,Information,Security,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode
+4981,Logon/Logoff,Information,Security,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode
+4982,Logon/Logoff,Information,Security,IPsec Main Mode and Extended Mode security associations were established.,IPsec Extended Mode
+4983,Logon/Logoff,Information,Security,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode
+4984,Logon/Logoff,Information,Security,An IPsec Extended Mode negotiation failed. The corresponding Main Mode security association has been deleted.,IPsec Extended Mode
+4985,Object Access,Information,Security,The state of a transaction has changed.,File System
+5008,Microsoft-Windows-Windows Defender/Operational,Error,Microsoft-Windows-Windows Defender/Operational,Unexpected Error,Windows Defender Activities
+5024,System,Information,System,The Windows Firewall Service has started successfully.,Other System Events
+5025,System,Information,System,The Windows Firewall Service has been stopped.,Other System Events
+5027,System,Error,System,The Windows Firewall Service was unable to retrieve the security policy from the local storage. The service will continue enforcing the current policy.,Other System Events
+5028,System,Error,System,The Windows Firewall Service was unable to parse the new security policy. The service will continue with currently enforced policy.,Other System Events
+5029,System,Error,System,The Windows Firewall Service failed to initialize the driver. The service will continue to enforce the current policy.,Other System Events
+5030,System,Error,System,The Windows Firewall Service failed to start.,Other System Events
+5031,System,Information,System,The Windows Firewall Service blocked an application from accepting incoming connections on the network.,Filtering Platform Connection
+5032,System,Information,System,Windows Firewall was unable to notify the user that it blocked an application from accepting incoming connections on the network.,Other System Events
+5033,System,Information,System,The Windows Firewall Driver has started successfully.,Other System Events
+5034,System,Information,System,The Windows Firewall Driver has been stopped.,Other System Events
+5035,System,Error,System,The Windows Firewall Driver failed to start.,Other System Events
+5037,System,Error,System,The Windows Firewall Driver detected critical runtime error. Terminating.,Other System Events
+5038,Security,Information,Security,Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error.,System Integrity
+5039,Object Access,Information,Security,A registry key was virtualized.,Registry
+5040,Policy Change,Information,Security,A change has been made to IPsec settings. An Authentication Set was added.,Filtering Platform Policy Change
+5041,Policy Change,Information,Security,A change has been made to IPsec settings. An Authentication Set was modified.,Filtering Platform Policy Change
+5042,Policy Change,Information,Security,A change has been made to IPsec settings. An Authentication Set was deleted.,Filtering Platform Policy Change
+5043,Policy Change,Information,Security,A change has been made to IPsec settings. A Connection Security Rule was added.,Filtering Platform Policy Change
+5044,Policy Change,Information,Security,A change has been made to IPsec settings. A Connection Security Rule was modified.,Filtering Platform Policy Change
+5045,Policy Change,Information,Security,A change has been made to IPsec settings. A Connection Security Rule was deleted.,Filtering Platform Policy Change
+5046,Policy Change,Information,Security,A change has been made to IPsec settings. A Crypto Set was added.,Filtering Platform Policy Change
+5047,Policy Change,Information,Security,A change has been made to IPsec settings. A Crypto Set was modified.,Filtering Platform Policy Change
+5048,Policy Change,Information,Security,A change has been made to IPsec settings. A Crypto Set was deleted.,Filtering Platform Policy Change
+5049,Logon/Logoff,Information,Security,An IPsec Security Association was deleted.,IPsec Main Mode
+5050,System,Information,Security,An attempt to programmatically disable the Windows Firewall was rejected because this API is not supported on Windows Vista.,Other System Events
+5051,Object Access,Information,Security,A file was virtualized.,File System
+5056,System,Information,Security,A cryptographic self test was performed.,System Integrity
+5057,System,Information,Security,A cryptographic primitive operation failed.,System Integrity
+5058,System,Information,Security,Key file operation.,Other System Events
+5059,System,Information,Security,Key migration operation.,Other System Events
+5060,System,Information,Security,Verification operation failed.,System Integrity
+5061,System,Information,Security,Cryptographic operation.,System Integrity
+5062,System,Information,Security,A kernel-mode cryptographic self test was performed.,System Integrity
+5063,Policy Change,Information,Security,A cryptographic provider operation was attempted.,Other Policy Change Events
+5064,Policy Change,Information,Security,A cryptographic context operation was attempted.,Other Policy Change Events
+5065,Policy Change,Information,Security,A cryptographic context modification was attempted.,Other Policy Change Events
+5066,Policy Change,Information,Security,A cryptographic function operation was attempted.,Other Policy Change Events
+5067,Policy Change,Information,Security,A cryptographic function modification was attempted.,Other Policy Change Events
+5068,Policy Change,Information,Security,A cryptographic function provider operation was attempted.,Other Policy Change Events
+5069,Policy Change,Information,Security,A cryptographic function property operation was attempted.,Other Policy Change Events
+5070,Policy Change,Information,Security,A cryptographic function property modification was attempted.,Other Policy Change Events
+5071,System,Information,Security,Key access denied by Microsoft key distribution service.,Other System Events
+5120,Object Access,Information,Security,OCSP Responder Service Started.,Certification Services
+5121,Object Access,Information,Security,OCSP Responder Service Stopped.,Certification Services
+5122,Object Access,Information,Security,A Configuration entry changed in the OCSP Responder Service.,Certification Services
+5123,Object Access,Information,Security,A configuration entry changed in the OCSP Responder Service.,Certification Services
+5124,Object Access,Information,Security,A security setting was updated on OCSP Responder Service.,Certification Services
+5125,Object Access,Information,Security,A request was submitted to OCSP Responder Service.,Certification Services
+5126,Object Access,Information,Security,Signing Certificate was automatically updated by the OCSP Responder Service.,Certification Services
+5127,Object Access,Information,Security,The OCSP Revocation Provider successfully updated the revocation information.,Certification Services
+5136,DS Access,Information,Security,A directory service object was modified.,Directory Service Changes
+5137,DS Access,Information,Security,A directory service object was created.,Directory Service Changes
+5138,DS Access,Information,Security,A directory service object was undeleted.,Directory Service Changes
+5139,DS Access,Information,Security,A directory service object was moved.,Directory Service Changes
+5140,Object Access,Information,Security,A network share object was accessed.,File Share
+5141,DS Access,Information,Security,A directory service object was deleted.,Directory Service Changes
+5142,Object Access,Information,Security,A network share object was added.,File Share
+5143,Object Access,Information,Security,A network share object was modified.,File Share
+5144,Object Access,Information,Security,A network share object was deleted.,File Share
+5145,Object Access,Information,Security,A network share object was checked to see whether the client can be granted desired access.,Detailed File Share
+5146,Object Access,Information,Security,The Windows Filtering Platform has blocked a packet.,Filtering Platform Packet Drop
+5147,Object Access,Information,Security,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop
+5148,Object Access,Information,Security,The Windows Filtering Platform has detected a DoS attack and entered a defensive mode; packets associated with this attack will be discarded.,Other Object Access Events
+5149,Object Access,Information,Security,The DoS attack has subsided and normal processing is being resumed.,Other Object Access Events
+5150,Object Access,Information,Security,The Windows Filtering Platform has blocked a packet.,Filtering Platform Connection
+5151,Object Access,Information,Security,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Connection
+5152,Object Access,Information,Security,The Windows Filtering Platform blocked a packet.,Filtering Platform Packet Drop
+5153,Object Access,Information,Security,A more restrictive Windows Filtering Platform filter has blocked a packet.,Filtering Platform Packet Drop
+5154,Object Access,Information,Security,The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.,Filtering Platform Connection
+5155,Object Access,Information,Security,The Windows Filtering Platform has blocked an application or service from listening on a port for incoming connections.,Filtering Platform Connection
+5156,Object Access,Information,Security,The Windows Filtering Platform has allowed a connection.,Filtering Platform Connection
+5157,Object Access,Information,Security,The Windows Filtering Platform has blocked a connection.,Filtering Platform Connection
+5158,Object Access,Information,Security,The Windows Filtering Platform has permitted a bind to a local port.,Filtering Platform Connection
+5159,Object Access,Information,Security,The Windows Filtering Platform has blocked a bind to a local port.,Filtering Platform Connection
+5168,Object Access,Information,Security,Spn check for SMB/SMB2 failed.,File Share
+5169,DS Access,Information,Security,A directory service object was modified.,Directory Service Access
+5170,DS Access,Information,Security,A directory service object was modified during a background cleanup task,Directory Service Access
+5376,Account Management,Information,Security,Credential Manager credentials were backed up.,User Account Management
+5377,Account Management,Information,Security,Credential Manager credentials were restored from a backup.,User Account Management
+5378,Logon/Logoff,Information,Security,The requested credentials delegation was disallowed by policy.,Other Logon/Logoff Events
+5379,Account Management,Information,Security,Credential Manager credentials were read.,User Account Management
+5380,Vault,Information,Security,Vault Find Credential,Vault
+5381,Vault,Information,Security,Vault credentials were read,Vault
+5382,Vault,Information,Security,Vault credentials were read,Vault
+5440,Policy Change,Information,Security,The following callout was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change
+5441,Policy Change,Information,Security,The following filter was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change
+5442,Policy Change,Information,Security,The following provider was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change
+5443,Policy Change,Information,Security,The following provider context was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change
+5444,Policy Change,Information,Security,The following sub-layer was present when the Windows Filtering Platform Base Filtering Engine started.,Filtering Platform Policy Change
+5446,Policy Change,Information,Security,A Windows Filtering Platform callout has been changed.,Filtering Platform Policy Change
+5447,Policy Change,Information,Security,A Windows Filtering Platform filter has been changed.,Other Policy Change Events
+5448,Policy Change,Information,Security,A Windows Filtering Platform provider has been changed.,Filtering Platform Policy Change
+5449,Policy Change,Information,Security,A Windows Filtering Platform provider context has been changed.,Filtering Platform Policy Change
+5450,Policy Change,Information,Security,A Windows Filtering Platform sub-layer has been changed.,Filtering Platform Policy Change
+5451,Logon/Logoff,Information,Security,An IPsec Quick Mode security association was established.,IPsec Quick Mode
+5452,Logon/Logoff,Information,Security,An IPsec Quick Mode security association ended.,IPsec Quick Mode
+5453,Logon/Logoff,Information,Security,An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started.,IPsec Main Mode
+5456,Policy Change,Information,Security,PAStore Engine applied Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5457,Policy Change,Information,Security,PAStore Engine failed to apply Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5458,Policy Change,Information,Security,PAStore Engine applied locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5459,Policy Change,Information,Security,PAStore Engine failed to apply locally cached copy of Active Directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5460,Policy Change,Information,Security,PAStore Engine applied local registry storage IPsec policy on the computer.,Filtering Platform Policy Change
+5461,Policy Change,Information,Security,PAStore Engine failed to apply local registry storage IPsec policy on the computer.,Filtering Platform Policy Change
+5462,Policy Change,Information,Security,PAStore Engine failed to apply some rules of the active IPsec policy on the computer. Use the IP Security Monitor snap-in to diagnose the problem.,Filtering Platform Policy Change
+5463,Policy Change,Information,Security,PAStore Engine polled for changes to the active IPsec policy and detected no changes.,Filtering Platform Policy Change
+5464,Policy Change,Information,Security,"PAStore Engine polled for changes to the active IPsec policy, detected changes, and applied them to IPsec Services.",Filtering Platform Policy Change
+5465,Policy Change,Information,Security,PAStore Engine received a control for forced reloading of IPsec policy and processed the control successfully.,Filtering Platform Policy Change
+5466,Policy Change,Information,Security,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory cannot be reached, and will use the cached copy of the Active Directory IPsec policy instead. Any changes made to the Active Directory IPsec policy since the last poll could not be applied.",Filtering Platform Policy Change
+5467,Policy Change,Information,Security,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, and found no changes to the policy. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change
+5468,Policy Change,Information,Security,"PAStore Engine polled for changes to the Active Directory IPsec policy, determined that Active Directory can be reached, found changes to the policy, and applied those changes. The cached copy of the Active Directory IPsec policy is no longer being used.",Filtering Platform Policy Change
+5471,Policy Change,Information,Security,PAStore Engine loaded local storage IPsec policy on the computer.,Filtering Platform Policy Change
+5472,Policy Change,Information,Security,PAStore Engine failed to load local storage IPsec policy on the computer.,Filtering Platform Policy Change
+5473,Policy Change,Information,Security,PAStore Engine loaded directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5474,Policy Change,Information,Security,PAStore Engine failed to load directory storage IPsec policy on the computer.,Filtering Platform Policy Change
+5477,Policy Change,Information,Security,PAStore Engine failed to add quick mode filter.,Filtering Platform Policy Change
+5478,System,Information,Security,IPsec Services has started successfully.,IPsec Driver
+5479,System,Information,Security,IPsec Services has been shut down successfully. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver
+5480,System,Information,Security,IPsec Services failed to get the complete list of network interfaces on the computer. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver
+5483,System,Information,Security,IPsec Services failed to initialize RPC server. IPsec Services could not be started.,IPsec Driver
+5484,System,Information,Security,IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.,IPsec Driver
+5485,System,Information,Security,IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.,IPsec Driver
+5632,Wireless 802.1X Auth,Information,Security,A request was made to authenticate to a wireless network.,Other Logon/Logoff Events
+5633,Logon/Logoff,Information,Security,A request was made to authenticate to a wired network.,Other Logon/Logoff Events
+5712,Detailed Tracking,Information,Security,A Remote Procedure Call (RPC) was attempted.,RPC Events
+5857,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,Windows WMI Activity,WMI
+5859,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,Windows WMI Activity,WMI
+5860,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,Windows WMI Activity,WMI
+5861,WMI Operational,Information,Microsoft-Windows-WMI-Activity/Operational,Windows WMI Activity,WMI
+5888,Object Access,Information,Security,An object in the COM+ Catalog was modified.,Other Object Access Events
+5889,Object Access,Information,Security,An object was deleted from the COM+ Catalog.,Other Object Access Events
+5890,Object Access,Information,Security,An object was added to the COM+ Catalog.,Other Object Access Events
+6144,Policy Change,Information,Security,Security policy in the group policy objects has been applied successfully.,Other Policy Change Events
+6145,Policy Change,Error,Security,One or more errors occurred while processing security policy in the group policy objects.,Other Policy Change Events
+6272,Logon/Logoff,Information,Security,Network Policy Server granted access to a user.,Network Policy Server
+6273,Logon/Logoff,Information,Security,Network Policy Server denied access to a user.,Network Policy Server
+6274,Logon/Logoff,Information,Security,Network Policy Server discarded the request for a user.,Network Policy Server
+6275,Logon/Logoff,Information,Security,Network Policy Server discarded the accounting request for a user.,Network Policy Server
+6276,Logon/Logoff,Information,Security,Network Policy Server quarantined a user.,Network Policy Server
+6277,Logon/Logoff,Information,Security,Network Policy Server granted access to a user but put it on probation because the host did not meet the defined health policy.,Network Policy Server
+6278,Logon/Logoff,Information,Security,Network Policy Server granted full access to a user because the host met the defined health policy.,Network Policy Server
+6279,Logon/Logoff,Information,Security,Network Policy Server locked the user account due to repeated failed authentication attempts.,Network Policy Server
+6280,Logon/Logoff,Information,Security,Network Policy Server unlocked the user account.,Network Policy Server
+6281,Security,Information,Security,Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification. The invalid hashes could indicate a potential disk device error,System Integrity
+6400,System,Information,System,BranchCache: Received an incorrectly formatted response while discovering availability of content.,Other System Events
+6401,System,Information,System,BranchCache: Received invalid data from a peer. Data discarded.,Other System Events
+6402,System,Information,System,BranchCache: The message to the hosted cache offering it data is incorrectly formatted.,Other System Events
+6403,System,Information,System,BranchCache: The hosted cache sent an incorrectly formatted response to the client.,Other System Events
+6404,System,Information,System,BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate.,Other System Events
+6405,System,Information,System,BranchCache: %2 instance(s) of event id %1 occurred.,Other System Events
+6406,System,Information,System,%1 registered to Windows Firewall to control filtering for the following: %2,Other System Events
+6407,System,Information,System,(blank),Other System Events
+6408,System,Error,System,Registered product %1 failed and Windows Firewall is now controlling the filtering for %2,Other System Events
+6409,System,Information,System,BranchCache: A service connection point object could not be parsed.,Other System Events
+6410,System,Information,System,Code integrity determined that a file does not meet the security requirements to load into a process.,System Integrity
+6416,System,Information,System,A new external device was recognized by the System,Plug and Play Events
+6417,System,Information,System,The FIPS mode crypto selftests succeeded.,System Integrity
+6418,System,Error,System,The FIPS mode crypto selftests failed.,System Integrity
+6419,System,Information,System,A request was made to disable a device,Plug and Play Events
+6420,System,Information,System,A device was disabled.,Plug and Play Events
+6421,System,Information,System,A request was made to enable a device.,Plug and Play Events
+6422,System,Information,System,A device was enabled.,Plug and Play Events
+6423,System,Information,System,The installation of this device is forbidden by system policy,Plug and Play Events
+6424,System,Information,System,"The installation of this device was allowed, after having previously been forbidden by policy.",Plug and Play Events
+7000,System,Error,System,The service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.,Service
+7009,System,Error,System,Service Control Manager - A timeout was reached,Service
+7022,System,Error,System,The service hung on starting,Service
+7023,System,Error,System,Windows Service Fails or Crashes,System or Service Failures
+7024,System,Error,System,The service terminated with service-specific error,Service
+7026,System,Error,System,Windows Service Fails or Crashes,System or Service Failures
+7030,System,Error,System,Service Creation Error,Service
+7031,System,Error,System,Service Crashed,Service
+7032,System,Error,System,Windows Service Fails or Crashes,System or Service Failures
+7034,System,Error,System,Service Crashed,Service
+7035,System,Information,System,Service sent a request to stop or start,Service
+7036,System,Information,System,Service was started or stopped,Service
+7040,System,Information,System,Service configured to interact with desktop,Service
+7045,System,Information,System,New Windows Service,Service
+8000,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Starting a Wireless Connection,Mobile Device Activities
+8001,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Successfully connected to a wireless connection,Mobile Device Activities
+8002,Applocker,Information,Microsoft-Windows-AppLocker/EXE and DLL,AppLocker Block,Application Whitelisting
+8003,Applocker,Error,Microsoft-Windows-AppLocker/EXE and DLL,AppLocker Block,Application Whitelisting
+8004,Applocker,Warning,Microsoft-Windows-AppLocker/EXE and DLL,AppLocker Block,Application Whitelisting
+8005,Applocker,Information,Microsoft-Windows-AppLocker/MSI and Script,Script or Installer ran,Application Whitelisting
+8006,Applocker,Error,Microsoft-Windows-AppLocker/MSI and Script,AppLocker Warning,Application Whitelisting
+8007,Applocker,Warning,Microsoft-Windows-AppLocker/MSI and Script,AppLocker Warning,Application Whitelisting
+8011,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Starting a Wireless Connection,Mobile Device Activities
+8020,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,Application Ran,Application Whitelisting
+8021,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,Application Ran,Application Whitelisting
+8022,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,Application Ran,Application Whitelisting
+8023,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Execution,Application Installed,Application Whitelisting
+8024,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,Application Installed,Application Whitelisting
+8025,Applocker,Information,Microsoft-Windows-AppLocker/Packaged app-Deployment,Application Installed,Application Whitelisting
+8191,Audit,Information,System,Highest System-Defined Audit Message Value,Windows Audit
+8222,Security,Information,VSSAudit,Shadow copy has been created,VSSAudit
+10000,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,Network Connection and Disconnection Status,Mobile Device Activities
+10001,Microsoft-Windows-NetworkProfile/Operational,Information,Microsoft-Windows-NetworkProfile/Operational,Network Connection and Disconnection Status,Mobile Device Activities
+11000,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless association status,Mobile Device Activities
+11001,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless association status,Mobile Device Activities
+11004,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities
+11005,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities
+11006,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities
+11010,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,"Wireless Security Started Stopped, Successful or Failed",Mobile Device Activities
+12011,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless Authentication Started and Failed,Mobile Device Activities
+12012,Microsoft-Windows-WLAN-AutoConfig/Operational,Information,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless Authentication Started and Failed,Mobile Device Activities
+12013,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless Authentication Started and Failed,Mobile Device Activities
+11002,Microsoft-Windows-WLAN-AutoConfig/Operational,Error,Microsoft-Windows-WLAN-AutoConfig/Operational,Wireless association status,Mobile Device Activities
+20001,Microsoft-Windows-User-PnP,Information,Microsoft-Windows-User-PnP,Driver Management concluded the process to install driverÊ,
+20250,Microsoft-Windows-MPRMSG,Success,Remote Access,RADIUS User assigned IP,Network Policy
+20274,Microsoft-Windows-MPRMSG,Success,Remote Access,RADIUS User Authenticated,Network Policy
+20275,Microsoft-Windows-MPRMSG,Success,Remote Access,RADIUS User Disconnected,Network Policy

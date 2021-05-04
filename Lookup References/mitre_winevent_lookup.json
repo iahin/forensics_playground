@@ -1,0 +1,1022 @@
+[
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Audio Capture",
+    "TechniqueID": "T1123"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Automated Collection",
+    "TechniqueID": "T1119"
+  },
+  {
+    "EventID": [4688, 4688, 200, 4663, 5861, 500, 4100, 4104],
+    "Tactic": "Collection",
+    "TechniqueName": "Data from Local System",
+    "TechniqueID": "T1005"
+  },
+  {
+    "EventID": [4688, 4688, 5140, 4663, 5145],
+    "Tactic": "Collection",
+    "TechniqueName": "Data from Network Shared Drive",
+    "TechniqueID": "T1039"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 4663, 5140, 5145],
+    "Tactic": "Collection",
+    "TechniqueName": "Data from Removable Media",
+    "TechniqueID": "T1025"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Data Staged",
+    "TechniqueID": "T1074"
+  },
+  {
+    "EventID": [4688, 5156, 4624, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Email Collection",
+    "TechniqueID": "T1114"
+  },
+  {
+    "EventID": [4624, 4688],
+    "Tactic": "Collection",
+    "TechniqueName": "Man in the Browser",
+    "TechniqueID": "T1185"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Screen Capture",
+    "TechniqueID": "T1113"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Collection",
+    "TechniqueName": "Video Capture",
+    "TechniqueID": "T1125"
+  },
+  {
+    "EventID": [4657, 4688],
+    "Tactic": "Collection,Credential Access",
+    "TechniqueName": "Input Capture",
+    "TechniqueID": "T1056"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Commonly Used Port",
+    "TechniqueID": "T1043"
+  },
+  {
+    "EventID": [4657, 4663],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Communication Through Removable Media",
+    "TechniqueID": "T1092"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Connection Proxy",
+    "TechniqueID": "T1090"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Custom Command and Control Protocol",
+    "TechniqueID": "T1094"
+  },
+  {
+    "EventID": [4688, 4688, 5156],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Custom Cryptographic Protocol",
+    "TechniqueID": "T1024"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Data Encoding",
+    "TechniqueID": "T1132"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Data Obfuscation",
+    "TechniqueID": "T1001"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Fallback Channels",
+    "TechniqueID": "T1008"
+  },
+  {
+    "EventID": [4688, 4688, 5156],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Multiband Communication",
+    "TechniqueID": "T1026"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Multilayer Encryption",
+    "TechniqueID": "T1079"
+  },
+  {
+    "EventID": [5156],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Multi-Stage Channels",
+    "TechniqueID": "T1104"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Remote Access Tools",
+    "TechniqueID": "T1219"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Standard Application Layer Protocol",
+    "TechniqueID": "T1071"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Standard Cryptographic Protocol",
+    "TechniqueID": "T1032"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Standard Non-Application Layer Protocol",
+    "TechniqueID": "T1095"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Command and Control",
+    "TechniqueName": "Uncommonly Used Port",
+    "TechniqueID": "T1065"
+  },
+  {
+    "EventID": [4663, 5156, 4688],
+    "Tactic": "Command and Control,Lateral Movement",
+    "TechniqueName": "Remote File Copy",
+    "TechniqueID": "T1105"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Account Manipulation",
+    "TechniqueID": "T1098"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Brute Force",
+    "TechniqueID": "T1110"
+  },
+  {
+    "EventID": [4688, 4688, 200, 500, 4100, 4104],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Credential Dumping",
+    "TechniqueID": "T1003"
+  },
+  {
+    "EventID": [4663, 4688],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Credentials in Files",
+    "TechniqueID": "T1081"
+  },
+  {
+    "EventID": [4657, 4688, 4688],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Credentials in Registry",
+    "TechniqueID": "T1214"
+  },
+  {
+    "EventID": [4624, 4688, 1000, 1001],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Exploitation for Credential Access",
+    "TechniqueID": "T1212"
+  },
+  {
+    "EventID": [5156, 4663],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Forced Authentication",
+    "TechniqueID": "T1187"
+  },
+  {
+    "EventID": [4769],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Kerberoasting",
+    "TechniqueID": "T1208"
+  },
+  {
+    "EventID": [4657, 5156],
+    "Tactic": "Credential Access",
+    "TechniqueName": "LLMNR/NBT-NS Poisoning",
+    "TechniqueID": "T1171"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Password Filter DLL",
+    "TechniqueID": "T1174"
+  },
+  {
+    "EventID": [4657],
+    "Tactic": "Credential Access",
+    "TechniqueName": "Private Keys",
+    "TechniqueID": "T1145"
+  },
+  {
+    "EventID": [4688, 7, 7],
+    "Tactic": "Credential Access,Persistence,Privilege Escalation",
+    "TechniqueName": "Hooking",
+    "TechniqueID": "T1179"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Binary Padding",
+    "TechniqueID": "T1009"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "DCShadow",
+    "TechniqueID": "T1207"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Deobfuscate/Decode Files or Information",
+    "TechniqueID": "T1140"
+  },
+  {
+    "EventID": [4688, 4689, 4657, 4663, 7040],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Disabling Security Tools",
+    "TechniqueID": "T1089"
+  },
+  {
+    "EventID": [5156, 4688, 7],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "DLL Side-Loading",
+    "TechniqueID": "T1073"
+  },
+  {
+    "EventID": [4688, 4663, 1000, 1001],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Exploitation for Defense Evasion",
+    "TechniqueID": "T1211"
+  },
+  {
+    "EventID": [4688, 4663, 9],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "File Deletion",
+    "TechniqueID": "T1107"
+  },
+  {
+    "EventID": [4688, 4688, 200, 4663, 500, 4100, 4104],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "File System Logical Offsets",
+    "TechniqueID": "T1006"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Indicator Blocking",
+    "TechniqueID": "T1054"
+  },
+  {
+    "EventID": [4688, 4688, 5156, 9],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Indicator Removal from Tools",
+    "TechniqueID": "T1066"
+  },
+  {
+    "EventID": [4663, 4688, 4688],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Indicator Removal on Host",
+    "TechniqueID": "T1070"
+  },
+  {
+    "EventID": [4688, 4688, 1, 7],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Indirect Command Execution",
+    "TechniqueID": "T1202"
+  },
+  {
+    "EventID": [4657],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Install Root Certificate",
+    "TechniqueID": "T1130"
+  },
+  {
+    "EventID": [4688, 4663, 9],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Masquerading",
+    "TechniqueID": "T1036"
+  },
+  {
+    "EventID": [4657, 4663, 4688, 4688],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Modify Registry",
+    "TechniqueID": "T1112"
+  },
+  {
+    "EventID": [4688, 4688, 5140, 4624, 5145],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Network Share Connection Removal",
+    "TechniqueID": "T1126"
+  },
+  {
+    "EventID": [4663],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "NTFS File Attributes",
+    "TechniqueID": "T1096"
+  },
+  {
+    "EventID": [5156, 4688, 4663],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Obfuscated Files or Information",
+    "TechniqueID": "T1027"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Process Doppelg?nging",
+    "TechniqueID": "T1186"
+  },
+  {
+    "EventID": [4688, 9],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Process Hollowing",
+    "TechniqueID": "T1093"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Rootkit",
+    "TechniqueID": "T1014"
+  },
+  {
+    "EventID": [9],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Software Packing",
+    "TechniqueID": "T1045"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Defense Evasion",
+    "TechniqueName": "Timestomp",
+    "TechniqueID": "T1099"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "CMSTP",
+    "TechniqueID": "T1191"
+  },
+  {
+    "EventID": [4688, 4688, 4657],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Control Panel Items",
+    "TechniqueID": "T1196"
+  },
+  {
+    "EventID": [4688, 4688, 1, 7],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "InstallUtil",
+    "TechniqueID": "T1118"
+  },
+  {
+    "EventID": [4688, 4688, 1, 7],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Mshta",
+    "TechniqueID": "T1170"
+  },
+  {
+    "EventID": [4688, 4688, 1, 7],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Regsvcs/Regasm",
+    "TechniqueID": "T1121"
+  },
+  {
+    "EventID": [4688, 4688, 7, 4657],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Regsvr32",
+    "TechniqueID": "T1117"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Rundll32",
+    "TechniqueID": "T1085"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Scripting",
+    "TechniqueID": "T1064"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Signed Binary Proxy Execution",
+    "TechniqueID": "T1218"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Signed Script Proxy Execution",
+    "TechniqueID": "T1216"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Defense Evasion,Execution",
+    "TechniqueName": "Trusted Developer Utilities",
+    "TechniqueID": "T1127"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "BITS Jobs",
+    "TechniqueID": "T1197"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "Component Firmware",
+    "TechniqueID": "T1109"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "Component Object Model Hijacking",
+    "TechniqueID": "T1122"
+  },
+  {
+    "EventID": [4663, 4688, 4688],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "Hidden Files and Directories",
+    "TechniqueID": "T1158"
+  },
+  {
+    "EventID": [4688, 5156, 4663, 4624, 9],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "Redundant Access",
+    "TechniqueID": "T1108"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Defense Evasion,Persistence",
+    "TechniqueName": "SIP and Trust Provider Hijacking",
+    "TechniqueID": "T1198"
+  },
+  {
+    "EventID": [4688, 4688, 4663, 7],
+    "Tactic": "Defense Evasion,Persistence,Privilege Escalation",
+    "TechniqueName": "DLL Search Order Hijacking",
+    "TechniqueID": "T1038"
+  },
+  {
+    "EventID": [4688, 4657, 0],
+    "Tactic": "Defense Evasion,Persistence,Privilege Escalation",
+    "TechniqueName": "Image File Execution Options Injection",
+    "TechniqueID": "T1183"
+  },
+  {
+    "EventID": [4624, 4688],
+    "Tactic": "Defense Evasion,Persistence,Privilege Escalation,Initial Access",
+    "TechniqueName": "Valid Accounts",
+    "TechniqueID": "T1078"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Defense Evasion,Privilege Escalation",
+    "TechniqueName": "Access Token Manipulation",
+    "TechniqueID": "T1134"
+  },
+  {
+    "EventID": [4688, 4688, 4624],
+    "Tactic": "Defense Evasion,Privilege Escalation",
+    "TechniqueName": "Bypass User Account Control",
+    "TechniqueID": "T1088"
+  },
+  {
+    "EventID": [4657, 4663, 4688],
+    "Tactic": "Defense Evasion,Privilege Escalation",
+    "TechniqueName": "Process Injection",
+    "TechniqueID": "T1055"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Account Discovery",
+    "TechniqueID": "T1087"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Application Window Discovery",
+    "TechniqueID": "T1010"
+  },
+  {
+    "EventID": [4663, 4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Browser Bookmark Discovery",
+    "TechniqueID": "T1217"
+  },
+  {
+    "EventID": [4663, 4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "File and Directory Discovery",
+    "TechniqueID": "T1083"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Discovery",
+    "TechniqueName": "Network Service Scanning",
+    "TechniqueID": "T1046"
+  },
+  {
+    "EventID": [4688, 4688, 5156, 5140, 5145],
+    "Tactic": "Discovery",
+    "TechniqueName": "Network Share Discovery",
+    "TechniqueID": "T1135"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Password Policy Discovery",
+    "TechniqueID": "T1201"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Peripheral Device Discovery",
+    "TechniqueID": "T1120"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Permission Groups Discovery",
+    "TechniqueID": "T1069"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Process Discovery",
+    "TechniqueID": "T1057"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Query Registry",
+    "TechniqueID": "T1012"
+  },
+  {
+    "EventID": [4688, 4688, 5156],
+    "Tactic": "Discovery",
+    "TechniqueName": "Remote System Discovery",
+    "TechniqueID": "T1018"
+  },
+  {
+    "EventID": [4663, 4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "Security Software Discovery",
+    "TechniqueID": "T1063"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Information Discovery",
+    "TechniqueID": "T1082"
+  },
+  {
+    "EventID": [4688, 4688, 200, 5861, 500, 4100, 4104],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Network Configuration Discovery",
+    "TechniqueID": "T1016"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Network Connections Discovery",
+    "TechniqueID": "T1049"
+  },
+  {
+    "EventID": [4688, 4688, 4663, 4624],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Owner/User Discovery",
+    "TechniqueID": "T1033"
+  },
+  {
+    "EventID": [4688, 4688, 5861],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Service Discovery",
+    "TechniqueID": "T1007"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Discovery",
+    "TechniqueName": "System Time Discovery",
+    "TechniqueID": "T1124"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Execution",
+    "TechniqueName": "Command-Line Interface",
+    "TechniqueID": "T1059"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Execution",
+    "TechniqueName": "Dynamic Data Exchange",
+    "TechniqueID": "T1173"
+  },
+  {
+    "EventID": [4688],
+    "Tactic": "Execution",
+    "TechniqueName": "Execution through API",
+    "TechniqueID": "T1106"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Execution",
+    "TechniqueName": "Execution through Module Load",
+    "TechniqueID": "T1129"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Execution",
+    "TechniqueName": "Exploitation for Client Execution",
+    "TechniqueID": "T1203"
+  },
+  {
+    "EventID": [4688, 4688, 4663, 9],
+    "Tactic": "Execution",
+    "TechniqueName": "Graphical User Interface",
+    "TechniqueID": "T1061"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 4663],
+    "Tactic": "Execution",
+    "TechniqueName": "PowerShell",
+    "TechniqueID": "T1086"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 7045, 7040],
+    "Tactic": "Execution",
+    "TechniqueName": "Service Execution",
+    "TechniqueID": "T1035"
+  },
+  {
+    "EventID": [4688, 4688],
+    "Tactic": "Execution",
+    "TechniqueName": "User Execution",
+    "TechniqueID": "T1204"
+  },
+  {
+    "EventID": [4688, 4688, 4624],
+    "Tactic": "Execution",
+    "TechniqueName": "Windows Management Instrumentation",
+    "TechniqueID": "T1047"
+  },
+  {
+    "EventID": [4688, 5156, 4663, 4657],
+    "Tactic": "Execution,Lateral Movement",
+    "TechniqueName": "Third-party Software",
+    "TechniqueID": "T1072"
+  },
+  {
+    "EventID": [4688, 4688, 5156, 5140, 4663, 4624, 5145],
+    "Tactic": "Execution,Lateral Movement",
+    "TechniqueName": "Windows Remote Management",
+    "TechniqueID": "T1028"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Execution,Persistence",
+    "TechniqueName": "LSASS Driver",
+    "TechniqueID": "T1177"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Execution,Persistence,Privilege Escalation",
+    "TechniqueName": "Scheduled Task",
+    "TechniqueID": "T1053"
+  },
+  {
+    "EventID": [4688, 4688, 5156, 4663],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Automated Exfiltration",
+    "TechniqueID": "T1020"
+  },
+  {
+    "EventID": [4688, 4688, 4663, 5156],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Data Compressed",
+    "TechniqueID": "T1002"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Data Encrypted",
+    "TechniqueID": "T1022"
+  },
+  {
+    "EventID": [5156, 4688],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Data Transfer Size Limits",
+    "TechniqueID": "T1030"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Exfiltration Over Alternative Protocol",
+    "TechniqueID": "T1048"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Exfiltration Over Command and Control Channel",
+    "TechniqueID": "T1041"
+  },
+  {
+    "EventID": [4688, 4688, 5156],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Exfiltration Over Other Network Medium",
+    "TechniqueID": "T1011"
+  },
+  {
+    "EventID": [4657, 219, 441],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Exfiltration Over Physical Medium",
+    "TechniqueID": "T1052"
+  },
+  {
+    "EventID": [5156, 4688, 100, 200],
+    "Tactic": "Exfiltration",
+    "TechniqueName": "Scheduled Transfer",
+    "TechniqueID": "T1029"
+  },
+  {
+    "EventID": [4688, 5156],
+    "Tactic": "Initial Access",
+    "TechniqueName": "Drive-by Compromise",
+    "TechniqueID": "T1189"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Initial Access",
+    "TechniqueName": "Spearphishing Attachment",
+    "TechniqueID": "T1193"
+  },
+  {
+    "EventID": [4663],
+    "Tactic": "Initial Access",
+    "TechniqueName": "Supply Chain Compromise",
+    "TechniqueID": "T1195"
+  },
+  {
+    "EventID": [4688, 4688, 5156, 4663],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Application Deployment Software",
+    "TechniqueID": "T1017"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Distributed Component Object Model",
+    "TechniqueID": "T1175"
+  },
+  {
+    "EventID": [4688, 4663, 1000, 1001],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Exploitation of Remote Services",
+    "TechniqueID": "T1210"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Pass the Hash",
+    "TechniqueID": "T1075"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Pass the Ticket",
+    "TechniqueID": "T1097"
+  },
+  {
+    "EventID": [4688, 4624],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Remote Desktop Protocol",
+    "TechniqueID": "T1076"
+  },
+  {
+    "EventID": [4624, 2123, 4625, 2541],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Remote Services",
+    "TechniqueID": "T1021"
+  },
+  {
+    "EventID": [4663, 4688],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Shared Webroot",
+    "TechniqueID": "T1051"
+  },
+  {
+    "EventID": [4663, 4688],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Taint Shared Content",
+    "TechniqueID": "T1080"
+  },
+  {
+    "EventID": [5156, 4624, 4688, 4688],
+    "Tactic": "Lateral Movement",
+    "TechniqueName": "Windows Admin Shares",
+    "TechniqueID": "T1077"
+  },
+  {
+    "EventID": [219, 4657, 4663, 421, 4657],
+    "Tactic": "Lateral Movement,Credential Access,Initial Access",
+    "TechniqueName": "Replication Through Removable Media",
+    "TechniqueID": "T1091"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Lateral Movement,Persistence",
+    "TechniqueName": "Logon Scripts",
+    "TechniqueID": "T1037"
+  },
+  {
+    "EventID": [4657],
+    "Tactic": "Persistence",
+    "TechniqueName": "Authentication Package",
+    "TechniqueID": "T1131"
+  },
+  {
+    "EventID": [5156, 4688, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Browser Extensions",
+    "TechniqueID": "T1176"
+  },
+  {
+    "EventID": [4657, 4688, 4688],
+    "Tactic": "Persistence",
+    "TechniqueName": "Change Default File Association",
+    "TechniqueID": "T1042"
+  },
+  {
+    "EventID": [4688, 4688, 4624],
+    "Tactic": "Persistence",
+    "TechniqueName": "Create Account",
+    "TechniqueID": "T1136"
+  },
+  {
+    "EventID": [4624],
+    "Tactic": "Persistence",
+    "TechniqueName": "External Remote Services",
+    "TechniqueID": "T1133"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 4663, 7040],
+    "Tactic": "Persistence",
+    "TechniqueName": "Modify Existing Service",
+    "TechniqueID": "T1031"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Persistence",
+    "TechniqueName": "Netsh Helper DLL",
+    "TechniqueID": "T1128"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Office Application Startup",
+    "TechniqueID": "T1137"
+  },
+  {
+    "EventID": [4657, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Registry Run Keys / Start Folder",
+    "TechniqueID": "T1060"
+  },
+  {
+    "EventID": [4688, 4688, 4657, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Screensaver",
+    "TechniqueID": "T1180"
+  },
+  {
+    "EventID": [4657],
+    "Tactic": "Persistence",
+    "TechniqueName": "Security Support Provider",
+    "TechniqueID": "T1101"
+  },
+  {
+    "EventID": [4688, 4688, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Shortcut Modification",
+    "TechniqueID": "T1023"
+  },
+  {
+    "EventID": [4688, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Time Providers",
+    "TechniqueID": "T1209"
+  },
+  {
+    "EventID": [5861],
+    "Tactic": "Persistence",
+    "TechniqueName": "Windows Management Instrumentation Event Subscription",
+    "TechniqueID": "T1084"
+  },
+  {
+    "EventID": [4688, 4657, 4663],
+    "Tactic": "Persistence",
+    "TechniqueName": "Winlogon Helper DLL",
+    "TechniqueID": "T1004"
+  },
+  {
+    "EventID": [4688, 4657, 4663],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Accessibility Features",
+    "TechniqueID": "T1015"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "AppCert DLLs",
+    "TechniqueID": "T1182"
+  },
+  {
+    "EventID": [4688, 4657],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "AppInit DLLs",
+    "TechniqueID": "T1103"
+  },
+  {
+    "EventID": [4688, 4688, 4657],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Application Shimming",
+    "TechniqueID": "T1138"
+  },
+  {
+    "EventID": [4663, 4688, 7040, 7045],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "File System Permissions Weakness",
+    "TechniqueID": "T1044"
+  },
+  {
+    "EventID": [4657, 4688, 4688],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "New Service",
+    "TechniqueID": "T1050"
+  },
+  {
+    "EventID": [4688, 4663, 866, 8000, 8027],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Path Interception",
+    "TechniqueID": "T1034"
+  },
+  {
+    "EventID": [4688, 4657, 4663],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Port Monitors",
+    "TechniqueID": "T1013"
+  },
+  {
+    "EventID": [4688, 7040, 4657, 7045],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Service Registry Permissions Weakness",
+    "TechniqueID": "T1058"
+  },
+  {
+    "EventID": [4688, 4663, 4624, 4625],
+    "Tactic": "Persistence,Privilege Escalation",
+    "TechniqueName": "Web Shell",
+    "TechniqueID": "T1100"
+  },
+  {
+    "EventID": [1000, 4688, 1001],
+    "Tactic": "Privilege Escalation",
+    "TechniqueName": "Exploitation for Privilege Escalation",
+    "TechniqueID": "T1068"
+  },
+  {
+    "EventID": [4624, 4625],
+    "Tactic": "Privilege Escalation",
+    "TechniqueName": "SID-History Injection",
+    "TechniqueID": "T1178"
+  }
+]

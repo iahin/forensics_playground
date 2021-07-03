@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+from py2neo import Graph, Node, Relationship, NodeMatcher, cypher
+from tqdm import tqdm
+
+
+# -----------------------------------------------------------------
+# BUILD_LABEL
+# -----------------------------------------------------------------
+def build_label(txt):
+    if txt.startswith('intrusion-set'): return 'Group'
+    if txt.startswith('malware'): return 'Software'
+    if txt.startswith('tool'): return 'Tool'
+    if txt.startswith('attack-pattern'): return 'Technique'
+    if txt.startswith('course-of-action'): return 'Technique'
+    return 'Unknown'
+
+
+# -----------------------------------------------------------------
+# BUILD ALIASES
+# -----------------------------------------------------------------
+def build_objects(obj, key):
+    label = build_label(obj['type'])
+
+    # add properties
+    props = {}
+    props['name'] = obj['name']
+    props['id'] = obj['id']
+    props['type'] = obj['type']
+    if obj.get('description'):        props['description'] = obj[
+        'description']  # cypher.cypher_escape( obj['description'] )
+    if obj.get('created'):            props['created'] = obj['created']
+    if obj.get('modified'):            props['modified'] = obj['modified']
+    if obj.get('x_mitre_version'):    props['version'] = obj['x_mitre_version']
+    if obj.get("external_references")[0]["external_id"]:    props['TechniqueId'] = obj['external_references'][0][
+        "external_id"]
+    # create node for the group
+    node_main = Node(label, **props)
+    # merge node to graph
+    graph.merge(node_main, label, 'name')
+    # print('%s: "%s"' % (label, obj['name']), end='')
+
+    # dealing with aliases
+    if obj.get('aliases'):
+        aliases = obj['aliases']
+    elif obj.get('x_mitre_aliases'):
+        aliases = obj['x_mitre_aliases']
+    else:
+        aliases = None
+    if aliases:
+        for alias in aliases:
+            if alias != obj['name']:
+                node_alias = Node('Alias', name=alias, type=obj['type'])
+                relation = Relationship.type('alias')
+                graph.merge(relation(node_main, node_alias), label, 'name')
+                # print(' -[alias]-> "%s"' % (alias), end='')
+
+
+# -----------------------------------------------------------------
+# BUILD RELATIONS
+# -----------------------------------------------------------------
+def build_relations(obj):
+    if not gnames.get(obj['source_ref']): return
+    if not gnames.get(obj['target_ref']): return
+
+    m = NodeMatcher(graph)
+
+    source = m.match(build_label(obj['source_ref']), name=gnames[obj['source_ref']]).first()
+    target = m.match(build_label(obj['target_ref']), name=gnames[obj['target_ref']]).first()
+
+    # source = Node( build_label(obj['source_ref']), name=gnames[obj['source_ref']], id=obj['source_ref'] )
+    # target = Node( build_label(obj['target_ref']), name=gnames[obj['target_ref']], id=obj['target_ref'] )
+    relation = Relationship.type(obj['relationship_type'])
+
+    graph.merge(relation(source, target), build_label(obj['source_ref']), 'name')
+    # print('Relation: "%s" -[%s]-> "%s"' % (gnames[obj['source_ref']], obj['relationship_type'], gnames[obj['target_ref']]))
+
+
+# -----------------------------------------------------------------
+# MAIN
+# -----------------------------------------------------------------
+
+# set command-line arguments and parsing options
+parser = argparse.ArgumentParser()
+parser.add_argument('-d', '--debug', help='enter debug mode', default=False, action='store_true')
+# parser.add_argument('-f', help='input file name', metavar='<filename>', action='store', default="./enterprise-attack.json")
+parser.add_argument('-g', '--groups', help='import Groups objects (type:intrusion-set)', default=False,
+                    action='store_true')
+parser.add_argument('-s', '--softwares', help='import Softwares objects (type:malware)', default=False,
+                    action='store_true')
+parser.add_argument('-o', '--tools', help='import Tools objects (type:tool)', default=False, action='store_true')
+parser.add_argument('-t', '--techniques',
+                    help='import Techniques objects (type:attack-pattern and type:course-of-action)', default=False,
+                    action='store_true')
+parser.add_argument('-r', '--relations', help='import Relations objects (type:relationship)', default=False,
+                    action='store_true')
+args = parser.parse_args()
+
+# open graph connection
+graph = Graph(password="admin",  port="11003")
+# Global names
+gnames = {}
+
+
+def populateMitre(json_file):
+
+
+    # load JSON data from file
+    try:
+        with open(json_file) as fh:
+            data = json.load(fh)
+        fh.close()
+    except Exception as e:
+        sys.stderr.write('[ERROR] reading configuration file %s\n' % json_file)
+        sys.stderr.write('[ERROR] %s\n' % str(e))
+        sys.exit(1)
+
+    # Walk through JSON objects to create nodes
+    for obj in tqdm(data['objects']):
+
+        # if JSON object is about Groups
+        if obj['type'] == 'intrusion-set':
+            gnames[obj['id']] = obj['name']
+            build_objects(obj, 'aliases')
+
+        if obj['type'] == 'malware':
+            gnames[obj['id']] = obj['name']
+            build_objects(obj, 'x_mitre_aliases')
+
+        # if JSON object is about Tools
+        if args.tools and obj['type'] == 'tool':
+            gnames[obj['id']] = obj['name']
+            build_objects(obj, 'x_mitre_aliases')
+
+        # if JSON object is about Techniques
+        if obj['type'] == 'attack-pattern' or obj['type'] == 'course-of-action':
+            gnames[obj['id']] = obj['name']
+            build_objects(obj, None)
+
+    # Walk through JSON objects to create edges
+    for obj in tqdm(data['objects']):
+
+        # if JSON object is about Relationships
+        if obj['type'] == 'relationship':
+            build_relations(obj)

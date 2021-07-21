@@ -5,7 +5,7 @@ import yaml
 import jsbeautifier
 from tqdm import tqdm
 
-rulespath = 'C:\\Users\\16sic\\Documents\\GitHub\\sladeworkplayground\\elasticsearch\\rules\\'
+rulespath = 'C:\\Users\\16sic\\Documents\\GitHub\\sladeworkplayground\\elasticsearch_sigma_module\\rules\\'
 evtx_pattern = Path(rulespath).glob("**\*.yml")
 evtx_file_list = [str(x) for x in evtx_pattern]
 
@@ -13,7 +13,7 @@ tempobj = []
 
 for ymlfile in tqdm(evtx_file_list):
     try:
-        arg = "sigmac -t es-qs -c C:\\Users\\16sic\\Documents\\GitHub\\sladeworkplayground\\elasticsearch\\config\\helk.yml " + \
+        arg = "sigmac -t es-qs -c C:\\Users\\16sic\\Documents\\GitHub\\sladeworkplayground\\elasticsearch_sigma_module\\config\\winglogbeat.yml " + \
             str(ymlfile)
         result = run(arg, hide=True, echo=False)
         result = result.stdout.strip()

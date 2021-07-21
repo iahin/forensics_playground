@@ -17,3 +17,7 @@ These are steps done to create the scripts
 1. Download Elasticsearch folder from the link above, extract and add the folder to "SLADE-KGA\CIE_server\playbook\", rename it to tools_elasticsearch
 2. Run "SLADE-KGA\CIE_server\playbook\tools_elasticsearch\bin\elasticsearch.bat" to start the server
 3. finally, run main.py to run a demo search on data in the data folder
+
+# Process Flow
+
+![sigmac flow](sigmac flow.PNG)

@@ -9,7 +9,7 @@ from elasticsearch_dsl import Search
 # sigmac -t 'es-dsl' -c .\helk.yml .\win_alert_active_directory_user_control.yml
 
 es = Elasticsearch()
-index_name = 'spf2'
+index_name = 'cfred'
 
 
 def loadlog(filename):
@@ -33,6 +33,7 @@ def searcher(queryobj):
     searchContext = Search(using=es, index=index_name)
     s = searchContext.query('query_string', query=queryobj)
     response = s.execute()
+    print(response)
 
     if response.success():
         result = [d.to_dict() for d in s.scan()]
@@ -40,13 +41,6 @@ def searcher(queryobj):
             return result
 
 
-# es.indices.delete(index=index_name)
-# loglist = loadlog('data\methods_cache_evtx.json')
-# uploader(loglist)
-
-
-queryobj = loadqueries('.\\queries\querylist.json')
-for item in queryobj:
-    querystring = item['query']
-    if searcher(querystring):
-        print(item['id'])
+es.indices.delete(index=index_name)
+loglist = loadlog('data\methods_cache_evtx.json')
+uploader(loglist)

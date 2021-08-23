@@ -21,3 +21,4 @@ These are steps done to create the scripts
 # Process Flow
 
 ![sigmac flow](sigmac flow.PNG)
+

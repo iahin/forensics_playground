@@ -1,0 +1,24 @@
+[2021-05-14T07:12:05.018+0000][5696][gc] Using G1
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Version: 16+36 (release)
+[2021-05-14T07:12:05.051+0000][5696][gc,init] CPUs: 12 total, 12 available
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Memory: 32519M
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Large Page Support: Disabled
+[2021-05-14T07:12:05.051+0000][5696][gc,init] NUMA Support: Disabled
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Compressed Oops: Enabled (Zero based)
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Heap Region Size: 8M
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Heap Min Capacity: 16264M
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Heap Initial Capacity: 16264M
+[2021-05-14T07:12:05.051+0000][5696][gc,init] Heap Max Capacity: 16264M
+[2021-05-14T07:12:05.052+0000][5696][gc,init] Pre-touch: Disabled
+[2021-05-14T07:12:05.052+0000][5696][gc,init] Parallel Workers: 10
+[2021-05-14T07:12:05.052+0000][5696][gc,init] Concurrent Workers: 3
+[2021-05-14T07:12:05.052+0000][5696][gc,init] Concurrent Refinement Workers: 10
+[2021-05-14T07:12:05.052+0000][5696][gc,init] Periodic GC: Disabled
+[2021-05-14T07:12:05.052+0000][5696][gc,metaspace] CDS disabled.
+[2021-05-14T07:12:05.052+0000][5696][gc,metaspace] Compressed class space mapped at: 0x00000007c0000000-0x0000000800000000, reserved size: 1073741824
+[2021-05-14T07:12:05.052+0000][5696][gc,metaspace] Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x800000000
+[2021-05-14T07:12:05.109+0000][5696][gc,heap,exit] Heap
+[2021-05-14T07:12:05.110+0000][5696][gc,heap,exit]  garbage-first heap   total 16654336K, used 12290K [0x00000003c7800000, 0x00000007c0000000)
+[2021-05-14T07:12:05.110+0000][5696][gc,heap,exit]   region size 8192K, 2 young (16384K), 0 survivors (0K)
+[2021-05-14T07:12:05.110+0000][5696][gc,heap,exit]  Metaspace       used 3582K, committed 3648K, reserved 1056768K
+[2021-05-14T07:12:05.110+0000][5696][gc,heap,exit]   class space    used 281K, committed 320K, reserved 1048576K

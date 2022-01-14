@@ -1,0 +1,17 @@
+/* For Modal */
+.left-column {
+    float: left;
+    width: 80%;
+  }
+  
+  .right-column {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

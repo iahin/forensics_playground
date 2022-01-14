@@ -76,26 +76,26 @@ reddit_data = [(data, data.y.item()) for data in reddit_data]
 """
 
 
-datalist = gatherdata(protein_data)
-dataname = 'PROTEINS_graph2vec'
-gettrainsample(size=4, filename=dataname+'_classification_train1')
-gettrainsample(size=6, filename=dataname+'_classification_train2')
-gettrainsample(size=8, filename=dataname+'_classification_train3')
-gettrainsample(size=5, filename=dataname+'_classification_test')
+# datalist = gatherdata(protein_data)
+# dataname = 'PROTEINS_graph2vec'
+# gettrainsample(size=4, filename=dataname+'_classification_train1')
+# gettrainsample(size=6, filename=dataname+'_classification_train2')
+# gettrainsample(size=8, filename=dataname+'_classification_train3')
+# gettrainsample(size=5, filename=dataname+'_classification_test')
 
-datalist = gatherdata(imdb_data)
-dataname = 'IMDB-BINARY_graph2vec'
-gettrainsample(size=4, filename=dataname+'_classification_train1')
-gettrainsample(size=6, filename=dataname+'_classification_train2')
-gettrainsample(size=8, filename=dataname+'_classification_train3')
-gettrainsample(size=5, filename=dataname+'_classification_test')
+# datalist = gatherdata(imdb_data)
+# dataname = 'IMDB-BINARY_graph2vec'
+# gettrainsample(size=4, filename=dataname+'_classification_train1')
+# gettrainsample(size=6, filename=dataname+'_classification_train2')
+# gettrainsample(size=8, filename=dataname+'_classification_train3')
+# gettrainsample(size=5, filename=dataname+'_classification_test')
 
-datalist = gatherdata(reddit_data)
-dataname = 'REDDIT-BINARY_graph2vec'
-gettrainsample(size=4, filename=dataname+'_classification_train1')
-gettrainsample(size=6, filename=dataname+'_classification_train2')
-gettrainsample(size=8, filename=dataname+'_classification_train3')
-gettrainsample(size=5, filename=dataname+'_classification_test')
+# datalist = gatherdata(reddit_data)
+# dataname = 'REDDIT-BINARY_graph2vec'
+# gettrainsample(size=4, filename=dataname+'_classification_train1')
+# gettrainsample(size=6, filename=dataname+'_classification_train2')
+# gettrainsample(size=8, filename=dataname+'_classification_train3')
+# gettrainsample(size=5, filename=dataname+'_classification_test')
 
 """
 * For novelty detection
@@ -121,3 +121,8 @@ gettrainsample(size=5, filename=dataname+'_classification_test')
 # gettrainsample(size=10, filename='novelty_train')
 # datalist = gatherdata(reddit_data_temp)
 # gettrainsample(size=5, filename='novelty_test')
+
+"""
+NEWEWEW    
+"""
+# TODO: create new dataset for new dataset prediction

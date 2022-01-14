@@ -6,8 +6,12 @@ from torch import nn
 
 import dataset
 from model import SCNN
-from train import train, eval
+from train import predict, retrain, train, eval
 from utils import getpredictionscore
+
+import streamlit as st
+import numpy as np
+from pprint import pprint
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-use_saved_dataset', type=bool, default=True)
@@ -16,39 +20,119 @@ parser.add_argument('-model_path', type=str, default="./data/model.pt")
 
 args = parser.parse_args()
 if args.use_saved_dataset:
-    train1, train2, train3, test = dataset.getsavedsample(1)
+    train_sample, new_sample, test_sample = dataset.getsavedsample(1)
 else:
     print("TODO")
 
 if args.use_pretrain_model:
-    print("TODO")
+    model = torch.load(args.model_path)
+    optimizer = optim.Adam(model.parameters(), lr=1e-3)
+    loss_fn = nn.BCELoss()
 else:
     model = SCNN(embedding_dim=32, hidden_size=16, output_size=2)
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
     loss_fn = nn.BCELoss()
 
-# Load train data
-train_dataset = dataset.data_std(train1)
-train_loader, validataion_loader = dataset.train_sampler(train_dataset)
+# Standardise datapoints
+train_sample = dataset.data_std(train_sample)
+test_sample = dataset.data_std(test_sample)
+new_sample = dataset.data_std(new_sample)
 
-# Load test data
-test_dataset = dataset.data_std(test)
-test_loader = dataset.test_sampler(test_dataset)
+# Declare train and validation loader
+train_loader, validation_loader = dataset.train_sampler(train_sample)
 
 # Train model
-train(train_loader, model, loss_fn, optimizer)
+train(train_loader, model, loss_fn, optimizer, args.model_path)
 
-# Eval model
-gt, pred = eval(test_loader, validataion_loader, model)
+# Eval with bast test
+test_loader = dataset.test_sampler(test_sample)
+gt, pred = eval(test_loader, validation_loader, model)
 getpredictionscore(gt, pred)
 
-# Predict new data(for production)
-## TODO
+# Predict 2 incorrect samples
+y_pred, similarity_score = predict(new_sample[9][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[9][1]))
 
-# Retrain model
-## TODO: Combine initial traindata with new labelled data
-# dataiter2 = train1 + train2
-# train_dataset = dataset.data_std(dataiter2)
-#
-# train_loader, validataion_loader = dataset.train_sampler(train_dataset)
-# train(train_loader, model, loss_fn, optimizer)
+y_pred, similarity_score = predict(new_sample[10][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[10][1]))
+
+y_pred, similarity_score = predict(new_sample[11][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[11][1]))
+
+
+# debug purpose
+# for i, x in enumerate(new_sample):
+#     y_pred, similarity_score = predict(
+#         x[0], validation_loader, model)
+#     print("index:", i, "predicted:", y_pred, "actual:", int(x[1]))
+
+# relabel sample and concate to training
+relabled_sample = [[new_sample[9][0], new_sample[9][1]],
+                   [new_sample[10][0], new_sample[10][1]]]
+combine_sample = train_sample + relabled_sample
+
+# load again to train sample for retrain
+train_loader, validation_loader = dataset.train_sampler(combine_sample)
+
+# retrain
+retrain(train_loader, model, loss_fn, optimizer, args.model_path)
+
+# Eval with base test data dnd early predicted correction
+test_loader = dataset.test_sampler(test_sample)
+gt, pred = eval(test_loader, validation_loader, model)
+getpredictionscore(gt, pred)
+
+y_pred, similarity_score = predict(new_sample[9][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[9][1]))
+
+y_pred, similarity_score = predict(new_sample[10][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[10][1]))
+
+y_pred, similarity_score = predict(new_sample[11][0], validation_loader, model)
+print("predicted:", y_pred, "actual:", int(new_sample[11][1]))
+
+
+"""
+* TEST UI
+"""
+# st.title('SLADE Cybercrime Prediction')
+# hide_streamlit_style = """
+#             <style>
+#             #MainMenu {visibility: hidden;}
+#             footer {visibility: hidden;}
+#             </style>
+#             """
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# d = st.selectbox(
+#     'Select caseid',
+#     ('spf1', 'spf2', 'spf3', 'spf4'))
+
+# # Predict new data(for production)
+# test_loader = next(x for i, x in enumerate(test_loader) if i ==
+#                    int(''.join(i for i in d if i.isdigit())))
+
+# st.write('Click to begin')
+
+# if st.button('Start'):
+#     y_pred, similarity_score = predict(test_loader, validation_loader, model)
+#     if y_pred == 0:
+#         st.write("Crime predicted: Unauthorised Access")
+#         st.write("Prediction Score: " +
+#                  str(similarity_score[0]/sum(similarity_score.values()) * 100))
+#     if y_pred == 1:
+#         st.write("Crime predicted: Data Theft")
+#         st.write("Prediction Score: " +
+#                  str(similarity_score[1]/sum(similarity_score.values()) * 100))
+#     if y_pred == 2:
+#         st.write("Crime predicted: Unknown")
+
+# st.text("")
+
+# st.text("Confirm Prediction?")
+# if st.button('Yes'):
+#     st.text("Prediction label confirmed. Added to database.")
+
+# if st.button('No'):
+#     option = st.selectbox('Please select the correct label for this case.',
+#                           ('Unauthorised Access', 'Data Theft'))

@@ -15,6 +15,16 @@ import matplotlib as plt
 attck = Attck()
 
 
+def getTtpList(root_tactic):
+    templist = []
+    for tactic in attck.enterprise.tactics:
+        if root_tactic in tactic.name:
+            for teachniques in tactic.techniques:
+                if 'Windows' in teachniques.platforms:
+                    templist.append(teachniques.id)
+    return templist
+
+
 def filtermitre():
     # Filter to only have windows based TTPs
     tacticcolumns = []
@@ -111,5 +121,6 @@ filteredapt = filtermitre()
 aptlist = aptmatrix(filteredapt)
 counter = paircounter(aptlist)
 graph = generate_graph(counter)
-flowlist = generateFlow(graph, "T1078")
-print(flowlist)
+
+flowlist = generateFlow(graph, "T1020")
+pprint(flowlist)

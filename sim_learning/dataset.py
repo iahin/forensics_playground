@@ -23,16 +23,14 @@ def getsavedsample(dataset_option):
     if dataset_option == 3:
         datasetname = "REDDIT-BINARY_graph2vec"
 
-    with open('data\\' + datasetname + '_classification_train1.npy', 'rb') as f:
-        train1 = np.load(f, allow_pickle=True)
-    with open('data\\' + datasetname + '_classification_train2.npy', 'rb') as f:
-        train2 = np.load(f, allow_pickle=True)
-    with open('data\\' + datasetname + '_classification_train3.npy', 'rb') as f:
-        train3 = np.load(f, allow_pickle=True)
+    with open('data\\' + datasetname + '_classification_train.npy', 'rb') as f:
+        train = np.load(f, allow_pickle=True)
+    with open('data\\' + datasetname + '_classification_new.npy', 'rb') as f:
+        new = np.load(f, allow_pickle=True)
     with open('data\\' + datasetname + '_classification_test.npy', 'rb') as f:
         test = np.load(f, allow_pickle=True)
 
-    return train1, train2, train3, test
+    return train, new, test
 
 
 def data_std(dataset):
@@ -72,7 +70,8 @@ def train_sampler(dataset):
 
     # validation loader is to do validation on train data with test data since train data cannot be used
     validation_list = [Data(x=x, y=y) for x, y in dataset]
-    validation_loader = DataLoader(validation_list, batch_size=1, shuffle=False)
+    validation_loader = DataLoader(
+        validation_list, batch_size=1, shuffle=False)
 
     return train_loader, validation_loader
 

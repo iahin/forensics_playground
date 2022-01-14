@@ -40,14 +40,14 @@ class SCNN(nn.ModuleList):
                        (self.kernel_1 - 1) - 1) / self.stride) + 1
         out_conv_1 = math.floor(out_conv_1)
         out_pool_1 = (
-                             (out_conv_1 - 1 * (self.kernel_1 - 1) - 1) / self.stride) + 1
+            (out_conv_1 - 1 * (self.kernel_1 - 1) - 1) / self.stride) + 1
         out_pool_1 = math.floor(out_pool_1)
 
         out_conv_2 = ((self.embedding_size - 1 *
                        (self.kernel_2 - 1) - 1) / self.stride) + 1
         out_conv_2 = math.floor(out_conv_2)
         out_pool_2 = (
-                             (out_conv_2 - 1 * (self.kernel_2 - 1) - 1) / self.stride) + 1
+            (out_conv_2 - 1 * (self.kernel_2 - 1) - 1) / self.stride) + 1
         out_pool_2 = math.floor(out_pool_2)
 
         return (out_pool_1 + out_pool_2) * self.hiddendim

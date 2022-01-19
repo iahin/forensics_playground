@@ -50,14 +50,18 @@ gt, pred = eval(test_loader, validation_loader, model)
 getpredictionscore(gt, pred)
 
 # Predict 2 incorrect samples
+print("_________________Prediction BEFORE retraining______________")
 y_pred, similarity_score = predict(new_sample[9][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[9][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[9][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 y_pred, similarity_score = predict(new_sample[10][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[10][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[10][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 y_pred, similarity_score = predict(new_sample[11][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[11][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[11][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 
 # debug purpose
@@ -82,14 +86,18 @@ test_loader = dataset.test_sampler(test_sample)
 gt, pred = eval(test_loader, validation_loader, model)
 getpredictionscore(gt, pred)
 
+print("_________________Prediction AFTER retraining______________")
 y_pred, similarity_score = predict(new_sample[9][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[9][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[9][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 y_pred, similarity_score = predict(new_sample[10][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[10][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[10][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 y_pred, similarity_score = predict(new_sample[11][0], validation_loader, model)
-print("predicted:", y_pred, "actual:", int(new_sample[11][1]))
+print("predicted:", y_pred, "actual:", int(new_sample[11][1]), str(
+    similarity_score[1]/sum(similarity_score.values()) * 100))
 
 
 """

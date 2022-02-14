@@ -6,11 +6,7 @@ To generate a workflow for playbook scripts using graph and DFS by referencing A
 
 1. Firstly, since the proposed approach are tested on Windows platform, we filtered the MITRE ATTACK list to only contains Windows based TTPs. (**May have to filter to only cater to TTP ids set by Custodio**)
 
-2. Following the the MITRE ATTACK table(figure 1), we create a list of APT Matrix that consists of permutated values of every columns(as shown in figure 2) to calculate how many time the TTP pairs are called together. For example, APT1 = {(T1,T2), (T2,T3), (T2,T4)}, APT2 = {(T1,T2), (T2,T4), (T5,T6)}. Column wise permutation are used in order of the sequence of the MITRE ATTACK framework attack sequence.
-
-   1. <img src="cap1.PNG" alt="cap1" style="zoom: 50%;" />
-
-   2. <img src="image-20210727092535588.png" alt="image-20210727092535588" style="zoom:50%;" />
+2. We create a list of APT Matrix that consists of permutated values of every columns(as shown in figure 2) to calculate how many time the TTP pairs are called together. For example, APT1 = {(T1,T2), (T2,T3), (T2,T4)}, APT2 = {(T1,T2), (T2,T4), (T5,T6)}. Column wise permutation are used in order of the sequence of the MITRE ATTACK framework attack sequence.
 
 3. The pairs of TTPs are then aggregated by the number of times the same pairs appear together to form a weightage table(figure 3) for the pairs in order to create a weighted graph.
 
@@ -23,17 +19,10 @@ To generate a workflow for playbook scripts using graph and DFS by referencing A
 
       Figure 3: An pairwise table with weights
 
-4. Once the weighted graph is generated(Figure 4), a Depth First Search Algorithm is used to generate a subgraph based on highest weight path for every edges connected to the TTP id. The generated DFS path will then be converted to a flow chart in the front end for sequential TTP detection(figure 6)
+4. Once the weighted graph is generated, a Depth First Search Algorithm is used to generate a subgraph based on highest weight path for every edges connected to the TTP id. The generated DFS path will then be converted to a flow chart in the front end for sequential TTP detection.
 
-   1. Figure 4
 
-      ![Figure 4](image-20211124152146759.png)
-
-   2. Figure 5![image-20211124152244158](image-20211124152244158.png)
-
-   3. Figure 6<img src="image-20211124153540165.png" alt="image-20211124153540165" style="zoom: 50%;" />
-
-## Low Level algorithm for weighted depth first search
+## Pseudocode
 
 ```
 graph = {(A,B,4), (A,C,6), (B,C,2)}
@@ -82,15 +71,7 @@ Based on discussion by Prof Peter during wednesday's meeting on 11.24.2021
 11. After running, in the background the playbook will search the generated flowchart sequentially
 12. Once the playbook has completed its detection search, it will display a collated result of the TTP id found in the system.
 
-![Capture](Capture.PNG)
-
 # Reference
 
 - [Finding Related ATT&CK Techniques](https://medium.com/mitre-attack/finding-related-att-ck-techniques-f1a4e8dfe2b6)
 - [MITRE MATRIX](https://mitre-attack.github.io/attack-navigator//#layerURL=https%3A%2F%2Fattack.mitre.org%2Fgroups%2FG0018%2FG0018-enterprise-layer.json)
-
-
-
-![8 Difference Between DFS (Depth First Search) And BFS (Breadth First Search)  In Artificial Intelligence - Viva Differences](https://vivadifferences.com/wp-content/uploads/2019/10/DFS-VS-BFS.png)
-
-Created by Isfaque.

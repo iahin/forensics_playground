@@ -55,4 +55,7 @@ nx.draw(GH, pos,
         node_size=400,
         width=4, alpha=0.5,
         with_labels=True)
-plt.show()
+
+
+# plt.show()
+# plt.savefig('foo.png')

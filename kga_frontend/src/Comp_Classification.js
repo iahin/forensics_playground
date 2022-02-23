@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Table, Button, Typography, Modal, Dropdown, Menu } from "antd";
 
 import "antd/dist/antd.css";
@@ -8,25 +8,120 @@ function Comp_Classification() {
   const { Title } = Typography;
 
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [state, setState] = React.useState("Click here to select an option");
+  const [loading, setLoading] = React.useState(true);
+  const [data, setData] = React.useState([]);
+  const [lastlabel, setLastlabel] = React.useState("");
 
-  const [state, setState] = React.useState("Unauthorised Access");
+  const get_classification_result_apiurl =
+    "http://localhost:3004/get_classification_result?caseid=" +
+    localStorage.getItem("caseid");
 
-  const onClick = ({ key }) => {
-    // message.info(`Click on item ${key}`);
+  const post_classification_result_apiurl =
+    "http://localhost:3004/post_classification_result?caseid=" +
+    localStorage.getItem("caseid");
+
+  const run_prediction =
+    "http://localhost:3004/run_prediction?caseid=" +
+    localStorage.getItem("caseid");
+
+  //* First page load
+  useEffect(() => {
+    fetch(get_classification_result_apiurl)
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error("Something went wrong");
+        }
+      })
+      .then((databody) => {
+        console.log(databody.message);
+        setData(databody.message);
+        //to get the last predicted label
+
+        setLastlabel(
+          databody.message[databody.message.length - 1].MacClassification
+        );
+
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  //* Button Clicks
+  const lblsendapi = () => {
+    fetch(post_classification_result_apiurl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userlabel: state,
+        user: localStorage.getItem("caseUser"),
+      }),
+    })
+      .then((res) => console.log(res.json()))
+      .then(() => window.location.reload());
+  };
+
+  const runpredict = () => {
+    fetch(run_prediction)
+      .then((res) => res.json())
+      .then((databody) => {
+        console.log(databody.message);
+        //setData(JSON.parse(databody.message).slice(0));
+      })
+      .then((rel) => window.location.reload())
+      .catch((error) => console.log(error));
+  };
+
+  //* Popup click events
+  const lblselect_onClick = ({ key }) => {
     setState(key);
   };
 
+  function renderlabellogic(param) {
+    switch (param) {
+      case "Unauthorized Access":
+        return [
+          <Menu.Item key="Data Theft">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Data Theft
+          </Menu.Item>,
+          <Menu.Item key="Unknown">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Unknown
+          </Menu.Item>,
+        ];
+      case "Data Theft":
+        return [
+          <Menu.Item key="Unauthorised Access">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Unauthorised Access
+          </Menu.Item>,
+          <Menu.Item key="Unknown">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Unknown
+          </Menu.Item>,
+        ];
+      default:
+        return [
+          <Menu.Item key="Unauthorised Access">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Unauthorised Access
+          </Menu.Item>,
+          <Menu.Item key="Data Theft">
+            <a target="_blank" rel="noopener noreferrer"></a>
+            Data Theft
+          </Menu.Item>,
+        ];
+    }
+  }
+
+  //! Logic: if prediction is Unauth, drop to have other labels as cannot be same as what is predicted.
   const menu = (
-    <Menu onClick={onClick}>
-      <Menu.Item key="Unauthorised Access">
-        <a target="_blank" rel="noopener noreferrer"></a>
-        Unauthorised Access
-      </Menu.Item>
-      <Menu.Item key="Data Theft">
-        <a target="_blank" rel="noopener noreferrer"></a>
-        Data Theft
-      </Menu.Item>
-    </Menu>
+    <Menu onClick={lblselect_onClick}>{renderlabellogic(lastlabel)}</Menu>
   );
 
   const showModal = () => {
@@ -34,6 +129,7 @@ function Comp_Classification() {
   };
 
   const handleOk = () => {
+    lblsendapi();
     setIsModalVisible(false);
   };
 
@@ -41,73 +137,86 @@ function Comp_Classification() {
     setIsModalVisible(false);
   };
 
+  //* Table data
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
+      title: "Time",
+      dataIndex: "key",
+      key: "key",
     },
     {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
+      title: "Machine Classification",
+      dataIndex: "MacClassification",
+      key: "MacClassification",
     },
     {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: "Score ",
+      dataIndex: "Satfac",
+      key: "Satfac",
+    },
+    {
+      title: "User Correction",
+      dataIndex: "UserCor",
+      key: "UserCor",
+    },
+    {
+      title: "User",
+      dataIndex: "user",
+      key: "user",
     },
   ];
 
-  const dataSource = [
-    {
-      key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-  ];
-
+  //* Render
   return (
-    <div >
-      <div style={{display: 'flex', justifyContent:'flex-start'}}>
-      
-      <Typography>
+    <div>
+      <div style={{ display: "flex", justifyContent: "flex-start" }}>
+        <Typography>
           <Title>Classification</Title>
-      </Typography>
-      
-      <Button style={{margin: '10px'}} onClick={showModal}>
-      Improve
-      </Button>
-      
+        </Typography>
+
+        {lastlabel ? (
+          <Button style={{ margin: "10px" }} onClick={showModal}>
+            Expert Correction
+          </Button>
+        ) : (
+          ""
+        )}
       </div>
-      
-       <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-         <Typography>
-          <Title level={5}>Select the appropriate classification for this case.</Title>
-      </Typography>
 
-      <Dropdown overlay={menu} placement="bottomCenter" >
-          <Button style={{width: "100%", textAlign: 'left'}}>{state}</Button>
-      </Dropdown>
+      <Modal
+        title="Expert Correction"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <Typography>
+          <Title level={5}>
+            Please select a label to correct the classification.
+          </Title>
+        </Typography>
 
+        <Dropdown overlay={menu} placement="bottomCenter">
+          <Button style={{ width: "100%", textAlign: "left" }}>{state}</Button>
+        </Dropdown>
       </Modal>
 
-      <Table
-      columns={columns}
-      dataSource={dataSource}
-      pagination={false}
-      bordered
-      scroll={{ y: 240 }}
-    />
+      {data.length > 0 ? (
+        <Table
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          bordered
+          scroll={{ y: 240 }}
+        />
+      ) : (
+        <div>
+          No classification found, click on Run Classification button to start.
+          <Button style={{ margin: "10px" }} onClick={runpredict}>
+            Run Classification
+          </Button>
+        </div>
+      )}
     </div>
-    
   );
 }
 
